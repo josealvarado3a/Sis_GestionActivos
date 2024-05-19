@@ -43,18 +43,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComBotonMoradoGuardarDefault.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComBotonMoradoGuardarDefault.Designer.cs">
+      <DependentUpon>ComBotonMoradoGuardarDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComBotonMoradoDefault.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComBotonMoradoDefault.Designer.cs">
+      <DependentUpon>ComBotonMoradoDefault.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComButtonDefault.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ComButtonDefault.Designer.cs">
       <DependentUpon>ComButtonDefault.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ComBotonMoradoGuardarDefault.resx">
+      <DependentUpon>ComBotonMoradoGuardarDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComBotonMoradoDefault.resx">
+      <DependentUpon>ComBotonMoradoDefault.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComButtonDefault.resx">
       <DependentUpon>ComButtonDefault.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\icons8-guardar-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

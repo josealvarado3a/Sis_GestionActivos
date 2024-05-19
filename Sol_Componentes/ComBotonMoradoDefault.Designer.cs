@@ -1,6 +1,6 @@
 ﻿namespace Sol_Componentes
 {
-    partial class ComButtonDefault
+    partial class ComBotonMoradoDefault
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDefault = new System.Windows.Forms.Button();
+            this.btnMoradoDefault = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnDefault
+            // btnMoradoDefault
             // 
-            this.btnDefault.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDefault.Location = new System.Drawing.Point(0, 0);
-            this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Size = new System.Drawing.Size(100, 30);
-            this.btnDefault.TabIndex = 0;
-            this.btnDefault.Text = "button1";
-            this.btnDefault.UseVisualStyleBackColor = false;
+            this.btnMoradoDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.btnMoradoDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoradoDefault.ForeColor = System.Drawing.Color.White;
+            this.btnMoradoDefault.Location = new System.Drawing.Point(0, 0);
+            this.btnMoradoDefault.Name = "btnMoradoDefault";
+            this.btnMoradoDefault.Size = new System.Drawing.Size(100, 30);
+            this.btnMoradoDefault.TabIndex = 0;
+            this.btnMoradoDefault.Text = "button1";
+            this.btnMoradoDefault.UseVisualStyleBackColor = false;
             // 
-            // ComButtonDefault
+            // ComBotonMoradoDefault
             // 
-            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnDefault);
-            this.Name = "ComButtonDefault";
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnMoradoDefault);
+            this.Name = "ComBotonMoradoDefault";
             this.Size = new System.Drawing.Size(100, 30);
-            this.Load += new System.EventHandler(this.ComButtonDefault_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnDefault;
+        private System.Windows.Forms.Button btnMoradoDefault;
     }
 }
