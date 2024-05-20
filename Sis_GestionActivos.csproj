@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBControlActivosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBControlActivosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\DBConexion.cs" />
     <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
@@ -63,6 +68,12 @@
     <Compile Include="Vistas\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Operarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Operarios.Designer.cs">
+      <DependentUpon>Operarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Recursos\Componentes.resx">
       <DependentUpon>Componentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,10 +85,25 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Operarios.resx">
+      <DependentUpon>Operarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBControlActivosDataSet.xsc">
+      <DependentUpon>DBControlActivosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBControlActivosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBControlActivosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBControlActivosDataSet.xss">
+      <DependentUpon>DBControlActivosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -30,6 +30,10 @@ namespace Sis_GestionActivos.Modelos
                     oSetdb["dbHost"] = "DESING\\SQLEXPRESS";
                     oSetdb["dbName"] = "DB_TAREAS";
                     break;
+                case "EMMANUEL":
+                    oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
+                    oSetdb["dbName"] = "DBControlActivos";
+                    break;
                 default:
                     MessageBox.Show("Server no identificado");
                     break;
