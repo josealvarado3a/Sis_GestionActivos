@@ -30,6 +30,7 @@ namespace Sis_GestionActivos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Componentes));
             this.btnMoradoDefault = new System.Windows.Forms.Button();
             this.btnGuardarMorado = new System.Windows.Forms.Button();
@@ -40,6 +41,10 @@ namespace Sis_GestionActivos
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnDefault35 = new System.Windows.Forms.Button();
+            this.toolTipBtnDefault35 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_buscar_35 = new System.Windows.Forms.Button();
+            this.btn_rehacer_35 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMoradoDefault
@@ -187,11 +192,66 @@ namespace Sis_GestionActivos
             this.button4.TextImageRelation = this.btnMoradoDefault.TextImageRelation;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // btnDefault35
+            // 
+            this.btnDefault35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.btnDefault35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefault35.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDefault35.Image = ((System.Drawing.Image)(resources.GetObject("btnDefault35.Image")));
+            this.btnDefault35.Location = new System.Drawing.Point(118, 12);
+            this.btnDefault35.Name = "btnDefault35";
+            this.btnDefault35.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDefault35.Size = new System.Drawing.Size(35, 35);
+            this.btnDefault35.TabIndex = 9;
+            this.btnDefault35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDefault35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipBtnDefault35.SetToolTip(this.btnDefault35, "Click para");
+            this.btnDefault35.UseVisualStyleBackColor = false;
+            // 
+            // toolTipBtnDefault35
+            // 
+            this.toolTipBtnDefault35.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // btn_buscar_35
+            // 
+            this.btn_buscar_35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.btn_buscar_35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_35.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_buscar_35.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar_35.Image")));
+            this.btn_buscar_35.Location = new System.Drawing.Point(159, 12);
+            this.btn_buscar_35.Name = "btn_buscar_35";
+            this.btn_buscar_35.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_buscar_35.Size = new System.Drawing.Size(35, 35);
+            this.btn_buscar_35.TabIndex = 10;
+            this.btn_buscar_35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_buscar_35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipBtnDefault35.SetToolTip(this.btn_buscar_35, "Click para buscar");
+            this.btn_buscar_35.UseVisualStyleBackColor = false;
+            // 
+            // btn_rehacer_35
+            // 
+            this.btn_rehacer_35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.btn_rehacer_35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rehacer_35.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_rehacer_35.Image = ((System.Drawing.Image)(resources.GetObject("btn_rehacer_35.Image")));
+            this.btn_rehacer_35.Location = new System.Drawing.Point(200, 12);
+            this.btn_rehacer_35.Name = "btn_rehacer_35";
+            this.btn_rehacer_35.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_rehacer_35.Size = new System.Drawing.Size(35, 35);
+            this.btn_rehacer_35.TabIndex = 11;
+            this.btn_rehacer_35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_rehacer_35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipBtnDefault35.SetToolTip(this.btn_rehacer_35, "Click para rehacer");
+            this.btn_rehacer_35.UseVisualStyleBackColor = false;
+            // 
             // Componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_rehacer_35);
+            this.Controls.Add(this.btn_buscar_35);
+            this.Controls.Add(this.btnDefault35);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -219,5 +279,9 @@ namespace Sis_GestionActivos
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDefault35;
+        private System.Windows.Forms.ToolTip toolTipBtnDefault35;
+        private System.Windows.Forms.Button btn_buscar_35;
+        private System.Windows.Forms.Button btn_rehacer_35;
     }
 }

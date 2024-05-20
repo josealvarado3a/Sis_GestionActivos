@@ -100,6 +100,7 @@
     <Content Include="Recursos\Icons\icons8-guardar-16.png" />
     <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
     <Content Include="Recursos\Icons\icons8-modificar-20.png" />
+    <Content Include="Recursos\Icons\icons8-search-20.png" />
     <Content Include="Recursos\Imagenes\activo-fijo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

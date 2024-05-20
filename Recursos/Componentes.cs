@@ -21,5 +21,10 @@ namespace Sis_GestionActivos
         {
 
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
