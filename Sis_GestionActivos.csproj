@@ -46,16 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controladores\LoginControlador.cs" />
-    <Compile Include="Vistas\Form1.cs">
+    <Compile Include="Modelos\DBConexion.cs" />
+    <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Recursos\Componentes.Designer.cs">
+      <DependentUpon>Componentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controladores\LoginControlador.cs" />
     <Compile Include="Modelos\LoginModelo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Recursos\Componentes.resx">
+      <DependentUpon>Componentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,8 +75,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,6 +90,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Recursos\Icons\icons8-añadir-24.png" />
+    <Content Include="Recursos\Icons\icons8-borrar-20.png" />
+    <Content Include="Recursos\Icons\icons8-cancelar-16.png" />
+    <Content Include="Recursos\Icons\icons8-cancelar-20.png" />
+    <Content Include="Recursos\Icons\icons8-guardar-16.png" />
+    <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
+    <Content Include="Recursos\Icons\icons8-modificar-20.png" />
+    <Content Include="Recursos\Imagenes\activo-fijo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

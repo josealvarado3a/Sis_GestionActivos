@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sis_GestionActivos.Modelos
 {
-    internal class LoginModelo
+    public class LoginModelo
     {
+       
     }
 }
