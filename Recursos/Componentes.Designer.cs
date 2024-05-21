@@ -45,6 +45,7 @@ namespace Sis_GestionActivos
             this.toolTipBtnDefault35 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_buscar_35 = new System.Windows.Forms.Button();
             this.btn_rehacer_35 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMoradoDefault
@@ -244,11 +245,25 @@ namespace Sis_GestionActivos
             this.toolTipBtnDefault35.SetToolTip(this.btn_rehacer_35, "Click para rehacer");
             this.btn_rehacer_35.UseVisualStyleBackColor = false;
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.Location = new System.Drawing.Point(257, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 100);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Activos";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.btn_rehacer_35);
             this.Controls.Add(this.btn_buscar_35);
             this.Controls.Add(this.btnDefault35);
@@ -283,5 +298,6 @@ namespace Sis_GestionActivos
         private System.Windows.Forms.ToolTip toolTipBtnDefault35;
         private System.Windows.Forms.Button btn_buscar_35;
         private System.Windows.Forms.Button btn_rehacer_35;
+        private System.Windows.Forms.Button button5;
     }
 }

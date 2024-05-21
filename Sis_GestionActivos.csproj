@@ -57,6 +57,12 @@
     <Compile Include="Modelos\LoginModelo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FormDepreciacionActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormDepreciacionActivos.Designer.cs">
+      <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\FormDepreciacionActivos.resx">
+      <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +102,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Recursos\Icons\activos_40.png" />
+    <Content Include="Recursos\Icons\clasificacion-activos-40.png" />
+    <Content Include="Recursos\Icons\depreciacion_activos_40.png" />
+    <Content Include="Recursos\Icons\empresa_40.png" />
     <Content Include="Recursos\Icons\icons8-añadir-24.png" />
     <Content Include="Recursos\Icons\icons8-borrar-20.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-16.png" />
@@ -101,6 +114,10 @@
     <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
     <Content Include="Recursos\Icons\icons8-modificar-20.png" />
     <Content Include="Recursos\Icons\icons8-search-20.png" />
+    <Content Include="Recursos\Icons\operarios_40.png" />
+    <Content Include="Recursos\Icons\ubicaciones_35.png" />
+    <Content Include="Recursos\Icons\ubicaciones_40.png" />
+    <Content Include="Recursos\Icons\usuario_40.png" />
     <Content Include="Recursos\Imagenes\activo-fijo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

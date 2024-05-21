@@ -16,8 +16,7 @@ namespace Sis_GestionActivos.Vistas
         private LoginControlador loginControlador;
         public FormLogin()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -40,30 +39,30 @@ namespace Sis_GestionActivos.Vistas
             string usuario = txt_usuario.Text;
             string password = txt_pwd.Text;
 
-            if (!string.IsNullOrEmpty(usuario))
+            if (string.IsNullOrEmpty(usuario))
             {
-                if (!string.IsNullOrEmpty(password))
-                {
+                MessageBox.Show("El campo usuario se encuentre vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    bool usuarioAutenticado = loginControlador.AutenticarLogin(usuario, password);
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("El campo contraseña se encuentre vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    if (usuarioAutenticado)
-                    {
-                        MessageBox.Show("Usuario encontrado");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario no encontrado");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Debe ingresar una contraseña antes de intentar acceder.");
-                }
+            bool usuarioAutenticado = loginControlador.IniciarSesion(usuario, password);
+
+            if (usuarioAutenticado)
+            {
+                FormDepreciacionActivos formDepreciacionActivos = new FormDepreciacionActivos();
+                formDepreciacionActivos.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Debe ingresar un usuario antes de intentar acceder.");
+                MessageBox.Show("El usuario ingresado no se encontro. Revise las credenciales y vuelva a intentarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 

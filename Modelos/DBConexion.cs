@@ -54,7 +54,6 @@ namespace Sis_GestionActivos.Modelos
                 try
                 {
                     conexion.Open();
-                    MessageBox.Show("Conexion abierta");
                 }
                 catch (Exception ex)
                 {
