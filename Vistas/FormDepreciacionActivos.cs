@@ -23,6 +23,11 @@ namespace Sis_GestionActivos.Vistas
 
             this.tab_control_DAF.Width = this.Width;
             this.tab_control_DAF.Height = this.Height - panel_top.Height;
+
+            this.panel_botones_AD.Width = this.tab_control_DAF.Width;
+            
+            this.AD_data_grid.Width = this.panel_botones_AD.Width;
+            this.AD_data_grid.Height = this.tab_control_DAF.Height;
         }
 
         private void FormDepreciacionActivos_Resize(object sender, EventArgs e)

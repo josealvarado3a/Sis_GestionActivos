@@ -46,6 +46,7 @@ namespace Sis_GestionActivos
             this.btn_buscar_35 = new System.Windows.Forms.Button();
             this.btn_rehacer_35 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMoradoDefault
@@ -258,11 +259,22 @@ namespace Sis_GestionActivos
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(25, 135);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 27);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Componentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btn_rehacer_35);
             this.Controls.Add(this.btn_buscar_35);
@@ -299,5 +311,6 @@ namespace Sis_GestionActivos
         private System.Windows.Forms.Button btn_buscar_35;
         private System.Windows.Forms.Button btn_rehacer_35;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
