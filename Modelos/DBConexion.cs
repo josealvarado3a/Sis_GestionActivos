@@ -24,11 +24,15 @@ namespace Sis_GestionActivos.Modelos
             {
                 case "Jose":
                     oSetdb["dbHost"] = "localhost";
-                    oSetdb["dbName"] = "DB_TAREAS";
+                    oSetdb["dbName"] = "DBControlActivos";
                     break;
                 case "DESING":
                     oSetdb["dbHost"] = "DESING\\SQLEXPRESS";
-                    oSetdb["dbName"] = "DB_TAREAS";
+                    oSetdb["dbName"] = "DBControlActivos";
+                    break;
+                case "EMMANUEL":
+                    oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
+                    oSetdb["dbName"] = "DBControlActivos";
                     break;
                 case "EMMANUEL":
                     oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
