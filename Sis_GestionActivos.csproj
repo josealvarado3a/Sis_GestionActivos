@@ -109,11 +109,13 @@
     <Content Include="Recursos\Icons\icons8-añadir-20.png" />
     <Content Include="Recursos\Icons\icons8-añadir-24.png" />
     <Content Include="Recursos\Icons\icons8-borrar-20.png" />
+    <Content Include="Recursos\Icons\icons8-calcular-20.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-16.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-20.png" />
     <Content Include="Recursos\Icons\icons8-guardar-16.png" />
     <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
     <Content Include="Recursos\Icons\icons8-modificar-20.png" />
+    <Content Include="Recursos\Icons\icons8-rehacer-20.png" />
     <Content Include="Recursos\Icons\icons8-search-20.png" />
     <Content Include="Recursos\Icons\operarios_40.png" />
     <Content Include="Recursos\Icons\ubicaciones_35.png" />
