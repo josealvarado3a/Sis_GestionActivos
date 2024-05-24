@@ -34,5 +34,13 @@ namespace Sis_GestionActivos.Vistas
         {
             this.Responsivo();
         }
+
+        private void btn_buscar_td_Click(object sender, EventArgs e)
+        {
+            FormBuscar formBuscar = new FormBuscar();
+            formBuscar.Text = "Buscar activo fijo";
+            formBuscar.TextBuscar("Utilice este campo para buscar por nombre");
+            formBuscar.ShowDialog();
+        }
     }
 }
