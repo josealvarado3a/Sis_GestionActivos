@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Modelos\DBControlActivos.sql" />
     <Content Include="Recursos\Icons\activos_40.png" />
     <Content Include="Recursos\Icons\cerrar-sesion-40.png" />
     <Content Include="Recursos\Icons\clasificacion-activos-40.png" />
