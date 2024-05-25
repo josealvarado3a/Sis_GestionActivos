@@ -69,6 +69,18 @@
     <Compile Include="Vistas\FormDepreciacionActivos.Designer.cs">
       <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormEmpresa.Designer.cs">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormInicial.Designer.cs">
+      <DependentUpon>FormInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     <EmbeddedResource Include="Vistas\FormDepreciacionActivos.resx">
       <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormInicial.resx">
+      <DependentUpon>FormInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +130,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Recursos\Icons\activos_40.png" />
+    <Content Include="Recursos\Icons\cerrar-sesion-40.png" />
     <Content Include="Recursos\Icons\clasificacion-activos-40.png" />
     <Content Include="Recursos\Icons\depreciacion_activos_40.png" />
     <Content Include="Recursos\Icons\empresa_40.png" />

@@ -55,9 +55,9 @@ namespace Sis_GestionActivos.Vistas
 
             if (usuarioAutenticado)
             {
-                FormDepreciacionActivos formDepreciacionActivos = new FormDepreciacionActivos();
-                formDepreciacionActivos.Show();
+                FormInicial formInicial = new FormInicial();
                 this.Hide();
+                formInicial.ShowDialog();
             }
             else
             {

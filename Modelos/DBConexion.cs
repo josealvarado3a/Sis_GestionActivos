@@ -34,6 +34,10 @@ namespace Sis_GestionActivos.Modelos
                     oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
                     oSetdb["dbName"] = "DBControlActivos";
                     break;
+                case "DESKTOP-T9C1R44":
+                    oSetdb["dbHost"] = "localhost";
+                    oSetdb["dbName"] = "DBControlActivos";
+                    break;
                 default:
                     MessageBox.Show("Server no identificado");
                     break;
