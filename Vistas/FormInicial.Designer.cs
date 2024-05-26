@@ -41,10 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel_sesion_inicada = new System.Windows.Forms.Panel();
             this.lb_rol = new System.Windows.Forms.Label();
-            this.lb_nombre_cargo = new System.Windows.Forms.Label();
             this.lb_nombre_usuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_sesion = new System.Windows.Forms.Label();
             this.group_btn_acesos = new System.Windows.Forms.GroupBox();
@@ -175,10 +173,8 @@
             // panel_sesion_inicada
             // 
             this.panel_sesion_inicada.Controls.Add(this.lb_rol);
-            this.panel_sesion_inicada.Controls.Add(this.lb_nombre_cargo);
             this.panel_sesion_inicada.Controls.Add(this.lb_nombre_usuario);
             this.panel_sesion_inicada.Controls.Add(this.label4);
-            this.panel_sesion_inicada.Controls.Add(this.label3);
             this.panel_sesion_inicada.Controls.Add(this.label1);
             this.panel_sesion_inicada.Controls.Add(this.lb_sesion);
             this.panel_sesion_inicada.Location = new System.Drawing.Point(3, 4);
@@ -190,27 +186,17 @@
             // 
             this.lb_rol.AutoSize = true;
             this.lb_rol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_rol.Location = new System.Drawing.Point(82, 70);
+            this.lb_rol.Location = new System.Drawing.Point(82, 62);
             this.lb_rol.Name = "lb_rol";
             this.lb_rol.Size = new System.Drawing.Size(21, 15);
             this.lb_rol.TabIndex = 13;
             this.lb_rol.Text = "rol";
             // 
-            // lb_nombre_cargo
-            // 
-            this.lb_nombre_cargo.AutoSize = true;
-            this.lb_nombre_cargo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nombre_cargo.Location = new System.Drawing.Point(82, 52);
-            this.lb_nombre_cargo.Name = "lb_nombre_cargo";
-            this.lb_nombre_cargo.Size = new System.Drawing.Size(38, 15);
-            this.lb_nombre_cargo.TabIndex = 12;
-            this.lb_nombre_cargo.Text = "cargo";
-            // 
             // lb_nombre_usuario
             // 
             this.lb_nombre_usuario.AutoSize = true;
             this.lb_nombre_usuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nombre_usuario.Location = new System.Drawing.Point(82, 35);
+            this.lb_nombre_usuario.Location = new System.Drawing.Point(82, 42);
             this.lb_nombre_usuario.Name = "lb_nombre_usuario";
             this.lb_nombre_usuario.Size = new System.Drawing.Size(99, 15);
             this.lb_nombre_usuario.TabIndex = 11;
@@ -220,27 +206,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 70);
+            this.label4.Location = new System.Drawing.Point(19, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "Rol:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Cargo:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 35);
+            this.label1.Location = new System.Drawing.Point(19, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 8;
@@ -413,10 +389,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel_sesion_inicada;
         private System.Windows.Forms.Label lb_rol;
-        private System.Windows.Forms.Label lb_nombre_cargo;
         private System.Windows.Forms.Label lb_nombre_usuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_sesion;
         private System.Windows.Forms.Button btn_cerrar_sesion;

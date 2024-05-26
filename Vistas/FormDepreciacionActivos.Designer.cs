@@ -39,42 +39,35 @@
             this.btn_modificar_ad = new System.Windows.Forms.Button();
             this.btn_nuevo_ad = new System.Windows.Forms.Button();
             this.AD_data_grid = new System.Windows.Forms.DataGridView();
-            this.Id_depreciacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_codigo_activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_nombre_activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_clasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_registrado_por = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ad_estado_activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.page_registro_DAF = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.cb_estado_depreciacion = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txt_registrado_por = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_ultimo_anio = new System.Windows.Forms.TextBox();
+            this.txt_anio_compra = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_ubicacion_activo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_valor_residual = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_valor_activo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_porcentaje_anual = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_anio_vida_util = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_clasificacion = new System.Windows.Forms.TextBox();
+            this.txt_id_clasificacion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_nombre_activo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_rehacer_35 = new System.Windows.Forms.Button();
             this.btn_buscar_35 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_id_activo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_activo_depreciar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -212,6 +205,7 @@
             this.btn_nuevo_ad.Text = "Nuevo";
             this.btn_nuevo_ad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nuevo_ad.UseVisualStyleBackColor = true;
+            this.btn_nuevo_ad.Click += new System.EventHandler(this.btn_nuevo_ad_Click);
             // 
             // AD_data_grid
             // 
@@ -219,86 +213,43 @@
             this.AD_data_grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.AD_data_grid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.AD_data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AD_data_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_depreciacion,
-            this.ad_fecha_registro,
-            this.ad_codigo_activo,
-            this.ad_nombre_activo,
-            this.ad_clasificacion,
-            this.ad_registrado_por,
-            this.ad_estado_activo});
             this.AD_data_grid.Location = new System.Drawing.Point(3, 41);
             this.AD_data_grid.Name = "AD_data_grid";
+            this.AD_data_grid.ReadOnly = true;
             this.AD_data_grid.RowTemplate.Height = 15;
             this.AD_data_grid.Size = new System.Drawing.Size(970, 441);
             this.AD_data_grid.TabIndex = 1;
             // 
-            // Id_depreciacion
-            // 
-            this.Id_depreciacion.HeaderText = "ID Depreciación";
-            this.Id_depreciacion.Name = "Id_depreciacion";
-            this.Id_depreciacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ad_fecha_registro
-            // 
-            this.ad_fecha_registro.HeaderText = "Fecha Registro";
-            this.ad_fecha_registro.Name = "ad_fecha_registro";
-            // 
-            // ad_codigo_activo
-            // 
-            this.ad_codigo_activo.HeaderText = "Código Activo";
-            this.ad_codigo_activo.Name = "ad_codigo_activo";
-            // 
-            // ad_nombre_activo
-            // 
-            this.ad_nombre_activo.HeaderText = "Nombre del activo";
-            this.ad_nombre_activo.Name = "ad_nombre_activo";
-            // 
-            // ad_clasificacion
-            // 
-            this.ad_clasificacion.HeaderText = "Clasificación";
-            this.ad_clasificacion.Name = "ad_clasificacion";
-            // 
-            // ad_registrado_por
-            // 
-            this.ad_registrado_por.HeaderText = "Registrado por";
-            this.ad_registrado_por.Name = "ad_registrado_por";
-            // 
-            // ad_estado_activo
-            // 
-            this.ad_estado_activo.HeaderText = "Estado del activo";
-            this.ad_estado_activo.Name = "ad_estado_activo";
-            // 
             // page_registro_DAF
             // 
-            this.page_registro_DAF.Controls.Add(this.button2);
-            this.page_registro_DAF.Controls.Add(this.button1);
-            this.page_registro_DAF.Controls.Add(this.comboBox1);
+            this.page_registro_DAF.Controls.Add(this.btn_cancelar);
+            this.page_registro_DAF.Controls.Add(this.btn_guardar);
+            this.page_registro_DAF.Controls.Add(this.cb_estado_depreciacion);
             this.page_registro_DAF.Controls.Add(this.label15);
-            this.page_registro_DAF.Controls.Add(this.textBox12);
+            this.page_registro_DAF.Controls.Add(this.txt_registrado_por);
             this.page_registro_DAF.Controls.Add(this.label14);
-            this.page_registro_DAF.Controls.Add(this.textBox11);
-            this.page_registro_DAF.Controls.Add(this.textBox10);
+            this.page_registro_DAF.Controls.Add(this.txt_ultimo_anio);
+            this.page_registro_DAF.Controls.Add(this.txt_anio_compra);
             this.page_registro_DAF.Controls.Add(this.label13);
             this.page_registro_DAF.Controls.Add(this.label12);
-            this.page_registro_DAF.Controls.Add(this.textBox9);
+            this.page_registro_DAF.Controls.Add(this.txt_ubicacion_activo);
             this.page_registro_DAF.Controls.Add(this.label11);
-            this.page_registro_DAF.Controls.Add(this.textBox8);
+            this.page_registro_DAF.Controls.Add(this.txt_valor_residual);
             this.page_registro_DAF.Controls.Add(this.label10);
-            this.page_registro_DAF.Controls.Add(this.textBox7);
+            this.page_registro_DAF.Controls.Add(this.txt_valor_activo);
             this.page_registro_DAF.Controls.Add(this.label9);
-            this.page_registro_DAF.Controls.Add(this.textBox6);
+            this.page_registro_DAF.Controls.Add(this.txt_porcentaje_anual);
             this.page_registro_DAF.Controls.Add(this.label8);
-            this.page_registro_DAF.Controls.Add(this.textBox5);
+            this.page_registro_DAF.Controls.Add(this.txt_anio_vida_util);
             this.page_registro_DAF.Controls.Add(this.label7);
-            this.page_registro_DAF.Controls.Add(this.textBox4);
-            this.page_registro_DAF.Controls.Add(this.textBox3);
+            this.page_registro_DAF.Controls.Add(this.txt_nombre_clasificacion);
+            this.page_registro_DAF.Controls.Add(this.txt_id_clasificacion);
             this.page_registro_DAF.Controls.Add(this.label6);
-            this.page_registro_DAF.Controls.Add(this.textBox2);
+            this.page_registro_DAF.Controls.Add(this.txt_nombre_activo);
             this.page_registro_DAF.Controls.Add(this.label5);
             this.page_registro_DAF.Controls.Add(this.btn_rehacer_35);
             this.page_registro_DAF.Controls.Add(this.btn_buscar_35);
-            this.page_registro_DAF.Controls.Add(this.textBox1);
+            this.page_registro_DAF.Controls.Add(this.txt_id_activo);
             this.page_registro_DAF.Controls.Add(this.label4);
             this.page_registro_DAF.Controls.Add(this.txt_activo_depreciar);
             this.page_registro_DAF.Controls.Add(this.label3);
@@ -312,57 +263,57 @@
             this.page_registro_DAF.Text = "Registro";
             this.page_registro_DAF.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_cancelar
             // 
-            this.button2.AutoSize = true;
-            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(480, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 27);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Cancelar";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_cancelar.AutoSize = true;
+            this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.Image")));
+            this.btn_cancelar.Location = new System.Drawing.Point(480, 246);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(87, 27);
+            this.btn_cancelar.TabIndex = 38;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_guardar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(382, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Guardar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.btn_guardar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.Location = new System.Drawing.Point(382, 243);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(92, 30);
+            this.btn_guardar.TabIndex = 37;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_guardar.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cb_estado_depreciacion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 252);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 36;
+            this.cb_estado_depreciacion.FormattingEnabled = true;
+            this.cb_estado_depreciacion.Location = new System.Drawing.Point(211, 252);
+            this.cb_estado_depreciacion.Name = "cb_estado_depreciacion";
+            this.cb_estado_depreciacion.Size = new System.Drawing.Size(120, 21);
+            this.cb_estado_depreciacion.TabIndex = 36;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(208, 228);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.Size = new System.Drawing.Size(133, 13);
             this.label15.TabIndex = 35;
-            this.label15.Text = "Estado del activo:";
+            this.label15.Text = "Estado de la depreciación:";
             // 
-            // textBox12
+            // txt_registrado_por
             // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(52, 253);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 34;
+            this.txt_registrado_por.Enabled = false;
+            this.txt_registrado_por.Location = new System.Drawing.Point(52, 253);
+            this.txt_registrado_por.Name = "txt_registrado_por";
+            this.txt_registrado_por.Size = new System.Drawing.Size(100, 20);
+            this.txt_registrado_por.TabIndex = 34;
             // 
             // label14
             // 
@@ -373,20 +324,20 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Registrado por:";
             // 
-            // textBox11
+            // txt_ultimo_anio
             // 
-            this.textBox11.Location = new System.Drawing.Point(819, 180);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 32;
+            this.txt_ultimo_anio.Location = new System.Drawing.Point(819, 180);
+            this.txt_ultimo_anio.Name = "txt_ultimo_anio";
+            this.txt_ultimo_anio.Size = new System.Drawing.Size(100, 20);
+            this.txt_ultimo_anio.TabIndex = 32;
             // 
-            // textBox10
+            // txt_anio_compra
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(654, 180);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 31;
+            this.txt_anio_compra.Enabled = false;
+            this.txt_anio_compra.Location = new System.Drawing.Point(654, 180);
+            this.txt_anio_compra.Name = "txt_anio_compra";
+            this.txt_anio_compra.Size = new System.Drawing.Size(100, 20);
+            this.txt_anio_compra.TabIndex = 31;
             // 
             // label13
             // 
@@ -406,13 +357,13 @@
             this.label12.TabIndex = 28;
             this.label12.Text = "Año de compra:";
             // 
-            // textBox9
+            // txt_ubicacion_activo
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(211, 180);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(383, 20);
-            this.textBox9.TabIndex = 27;
+            this.txt_ubicacion_activo.Enabled = false;
+            this.txt_ubicacion_activo.Location = new System.Drawing.Point(211, 180);
+            this.txt_ubicacion_activo.Name = "txt_ubicacion_activo";
+            this.txt_ubicacion_activo.Size = new System.Drawing.Size(383, 20);
+            this.txt_ubicacion_activo.TabIndex = 27;
             // 
             // label11
             // 
@@ -423,12 +374,12 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Ubicación del activo:";
             // 
-            // textBox8
+            // txt_valor_residual
             // 
-            this.textBox8.Location = new System.Drawing.Point(52, 180);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 25;
+            this.txt_valor_residual.Location = new System.Drawing.Point(52, 180);
+            this.txt_valor_residual.Name = "txt_valor_residual";
+            this.txt_valor_residual.Size = new System.Drawing.Size(100, 20);
+            this.txt_valor_residual.TabIndex = 25;
             // 
             // label10
             // 
@@ -439,13 +390,13 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Valor residual:";
             // 
-            // textBox7
+            // txt_valor_activo
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(819, 111);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 23;
+            this.txt_valor_activo.Enabled = false;
+            this.txt_valor_activo.Location = new System.Drawing.Point(819, 111);
+            this.txt_valor_activo.Name = "txt_valor_activo";
+            this.txt_valor_activo.Size = new System.Drawing.Size(100, 20);
+            this.txt_valor_activo.TabIndex = 23;
             // 
             // label9
             // 
@@ -456,13 +407,13 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Valor del activo:";
             // 
-            // textBox6
+            // txt_porcentaje_anual
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(654, 111);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 21;
+            this.txt_porcentaje_anual.Enabled = false;
+            this.txt_porcentaje_anual.Location = new System.Drawing.Point(654, 111);
+            this.txt_porcentaje_anual.Name = "txt_porcentaje_anual";
+            this.txt_porcentaje_anual.Size = new System.Drawing.Size(100, 20);
+            this.txt_porcentaje_anual.TabIndex = 21;
             // 
             // label8
             // 
@@ -473,13 +424,13 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Procentaje anual:";
             // 
-            // textBox5
+            // txt_anio_vida_util
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(494, 111);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 19;
+            this.txt_anio_vida_util.Enabled = false;
+            this.txt_anio_vida_util.Location = new System.Drawing.Point(494, 111);
+            this.txt_anio_vida_util.Name = "txt_anio_vida_util";
+            this.txt_anio_vida_util.Size = new System.Drawing.Size(100, 20);
+            this.txt_anio_vida_util.TabIndex = 19;
             // 
             // label7
             // 
@@ -490,21 +441,21 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Años de vida útil:";
             // 
-            // textBox4
+            // txt_nombre_clasificacion
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(167, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(249, 20);
-            this.textBox4.TabIndex = 17;
+            this.txt_nombre_clasificacion.Enabled = false;
+            this.txt_nombre_clasificacion.Location = new System.Drawing.Point(167, 111);
+            this.txt_nombre_clasificacion.Name = "txt_nombre_clasificacion";
+            this.txt_nombre_clasificacion.Size = new System.Drawing.Size(249, 20);
+            this.txt_nombre_clasificacion.TabIndex = 17;
             // 
-            // textBox3
+            // txt_id_clasificacion
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(52, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.txt_id_clasificacion.Enabled = false;
+            this.txt_id_clasificacion.Location = new System.Drawing.Point(52, 111);
+            this.txt_id_clasificacion.Name = "txt_id_clasificacion";
+            this.txt_id_clasificacion.Size = new System.Drawing.Size(100, 20);
+            this.txt_id_clasificacion.TabIndex = 16;
             // 
             // label6
             // 
@@ -515,13 +466,13 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Clasifiación del Activo:";
             // 
-            // textBox2
+            // txt_nombre_activo
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(602, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 20);
-            this.textBox2.TabIndex = 14;
+            this.txt_nombre_activo.Enabled = false;
+            this.txt_nombre_activo.Location = new System.Drawing.Point(602, 42);
+            this.txt_nombre_activo.Name = "txt_nombre_activo";
+            this.txt_nombre_activo.Size = new System.Drawing.Size(328, 20);
+            this.txt_nombre_activo.TabIndex = 14;
             // 
             // label5
             // 
@@ -562,13 +513,13 @@
             this.btn_buscar_35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_buscar_35.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_id_activo
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(365, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txt_id_activo.Enabled = false;
+            this.txt_id_activo.Location = new System.Drawing.Point(365, 42);
+            this.txt_id_activo.Name = "txt_id_activo";
+            this.txt_id_activo.Size = new System.Drawing.Size(100, 20);
+            this.txt_id_activo.TabIndex = 5;
             // 
             // label4
             // 
@@ -786,6 +737,7 @@
             this.Name = "FormDepreciacionActivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Depreciación de activos";
+            this.Load += new System.EventHandler(this.FormDepreciacionActivos_Load);
             this.Resize += new System.EventHandler(this.FormDepreciacionActivos_Resize);
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
@@ -818,46 +770,39 @@
         private System.Windows.Forms.Button btn_nuevo_ad;
         private System.Windows.Forms.Button btn_modificar_ad;
         private System.Windows.Forms.Button btn_eliminar_ad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_depreciacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_fecha_registro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_codigo_activo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_nombre_activo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_clasificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_registrado_por;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ad_estado_activo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_id_activo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_activo_depreciar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_fecha_registro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_buscar_35;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_nombre_activo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_rehacer_35;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_nombre_clasificacion;
+        private System.Windows.Forms.TextBox txt_id_clasificacion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_valor_residual;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_valor_activo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_porcentaje_anual;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_anio_vida_util;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_ubicacion_activo;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_estado_depreciacion;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txt_registrado_por;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_ultimo_anio;
+        private System.Windows.Forms.TextBox txt_anio_compra;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btn_rehacer_td;

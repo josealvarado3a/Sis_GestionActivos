@@ -12,6 +12,7 @@ namespace Sis_GestionActivos.Vistas
 {
     public partial class FormInicial : Form
     {
+        public string idRolUsuario;
         public FormInicial()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Sis_GestionActivos.Vistas
         {
             this.Text = lb_nombre_sistema.Text;
             this.WindowState = FormWindowState.Maximized;
+            this.habilitarAccesos(this.idRolUsuario);
             this.HorayFecha();
         }
 
@@ -64,6 +66,22 @@ namespace Sis_GestionActivos.Vistas
         {
             FormEmpresa formEmpresa = new FormEmpresa();
             formEmpresa.ShowDialog();
+        }
+
+        public void datosInicioSesion(string nombre_usuario, string id_rol, string rol_usuario)
+        {
+            lb_nombre_usuario.Text = nombre_usuario;
+            lb_rol.Text = rol_usuario;
+            this.idRolUsuario = id_rol;
+        }
+
+        public void habilitarAccesos(string id_rol)
+        {
+            if (id_rol.Equals("2"))
+            {
+                btn_empresa.Enabled = false;
+                btn_usuarios.Enabled = false;
+            }
         }
     }
 }

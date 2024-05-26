@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\DepreciacionActivosControlador.cs" />
     <Compile Include="Modelos\DBConexion.cs" />
+    <Compile Include="Modelos\DepreciacionActivosModelo.cs" />
     <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
     </Compile>

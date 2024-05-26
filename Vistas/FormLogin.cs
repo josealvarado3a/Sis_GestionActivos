@@ -57,6 +57,15 @@ namespace Sis_GestionActivos.Vistas
             {
                 FormInicial formInicial = new FormInicial();
                 this.Hide();
+
+                DataTable dtDatosUsuario = new DataTable();
+                dtDatosUsuario = loginControlador.DatosUsuario(usuario);
+
+                var nombre_usuario = dtDatosUsuario.Rows[0]["nombre_usuario"].ToString() + " " + dtDatosUsuario.Rows[0]["apellidos_usuario"].ToString();
+                var id_rol_usuario = dtDatosUsuario.Rows[0]["rol_usuario"].ToString();
+                var nombre_rol = dtDatosUsuario.Rows[0]["nombre_rol"].ToString();
+
+                formInicial.datosInicioSesion(nombre_usuario,id_rol_usuario, nombre_rol);
                 formInicial.ShowDialog();
             }
             else
