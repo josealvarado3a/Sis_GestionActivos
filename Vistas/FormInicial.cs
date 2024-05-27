@@ -83,5 +83,31 @@ namespace Sis_GestionActivos.Vistas
                 btn_usuarios.Enabled = false;
             }
         }
+
+        private void btn_operarios_Click(object sender, EventArgs e)
+        {
+            Operarios formOperarios = new Operarios();
+            formOperarios.ShowDialog();
+        }
+
+        private void btn_activos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clasificacion_activos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ubicaciones_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

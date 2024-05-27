@@ -30,7 +30,7 @@ namespace Sis_GestionActivos.Modelos
                     oSetdb["dbHost"] = "DESING\\SQLEXPRESS";
                     oSetdb["dbName"] = "DBControlActivos";
                     break;
-                case "EMMANUEL":
+                case "Emmanuel":
                     oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
                     oSetdb["dbName"] = "DBControlActivos";
                     break;

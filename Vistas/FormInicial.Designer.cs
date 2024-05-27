@@ -69,8 +69,9 @@
             this.panel_encabezado.Controls.Add(this.picture_logo);
             this.panel_encabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_encabezado.Location = new System.Drawing.Point(0, 0);
+            this.panel_encabezado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_encabezado.Name = "panel_encabezado";
-            this.panel_encabezado.Size = new System.Drawing.Size(984, 110);
+            this.panel_encabezado.Size = new System.Drawing.Size(1312, 135);
             this.panel_encabezado.TabIndex = 0;
             // 
             // label2
@@ -78,9 +79,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(125, 64);
+            this.label2.Location = new System.Drawing.Point(167, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 19);
+            this.label2.Size = new System.Drawing.Size(208, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "nombre_de_empresa";
             // 
@@ -89,17 +91,19 @@
             this.lb_nombre_sistema.AutoSize = true;
             this.lb_nombre_sistema.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nombre_sistema.ForeColor = System.Drawing.SystemColors.Control;
-            this.lb_nombre_sistema.Location = new System.Drawing.Point(125, 30);
+            this.lb_nombre_sistema.Location = new System.Drawing.Point(167, 37);
+            this.lb_nombre_sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nombre_sistema.Name = "lb_nombre_sistema";
-            this.lb_nombre_sistema.Size = new System.Drawing.Size(334, 22);
+            this.lb_nombre_sistema.Size = new System.Drawing.Size(419, 29);
             this.lb_nombre_sistema.TabIndex = 2;
             this.lb_nombre_sistema.Text = "Sistema para gestión de Activo Fijo";
             // 
             // picture_logo
             // 
-            this.picture_logo.Location = new System.Drawing.Point(12, 10);
+            this.picture_logo.Location = new System.Drawing.Point(16, 12);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(90, 90);
+            this.picture_logo.Size = new System.Drawing.Size(120, 111);
             this.picture_logo.TabIndex = 1;
             this.picture_logo.TabStop = false;
             // 
@@ -109,9 +113,10 @@
             this.panel_footer.Controls.Add(this.panel_fecha);
             this.panel_footer.Controls.Add(this.panel_sesion_inicada);
             this.panel_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_footer.Location = new System.Drawing.Point(0, 501);
+            this.panel_footer.Location = new System.Drawing.Point(0, 617);
+            this.panel_footer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_footer.Name = "panel_footer";
-            this.panel_footer.Size = new System.Drawing.Size(984, 110);
+            this.panel_footer.Size = new System.Drawing.Size(1312, 135);
             this.panel_footer.TabIndex = 2;
             // 
             // panel_fecha
@@ -120,9 +125,10 @@
             this.panel_fecha.Controls.Add(this.lb_fecha);
             this.panel_fecha.Controls.Add(this.lb_hora);
             this.panel_fecha.Controls.Add(this.label5);
-            this.panel_fecha.Location = new System.Drawing.Point(591, 7);
+            this.panel_fecha.Location = new System.Drawing.Point(788, 9);
+            this.panel_fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_fecha.Name = "panel_fecha";
-            this.panel_fecha.Size = new System.Drawing.Size(384, 100);
+            this.panel_fecha.Size = new System.Drawing.Size(512, 123);
             this.panel_fecha.TabIndex = 9;
             // 
             // btn_cerrar_sesion
@@ -130,9 +136,10 @@
             this.btn_cerrar_sesion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.Red;
             this.btn_cerrar_sesion.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar_sesion.Image")));
-            this.btn_cerrar_sesion.Location = new System.Drawing.Point(257, 0);
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(343, 0);
+            this.btn_cerrar_sesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
-            this.btn_cerrar_sesion.Size = new System.Drawing.Size(100, 100);
+            this.btn_cerrar_sesion.Size = new System.Drawing.Size(133, 123);
             this.btn_cerrar_sesion.TabIndex = 13;
             this.btn_cerrar_sesion.Text = "Cerrar Sessión";
             this.btn_cerrar_sesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -143,9 +150,10 @@
             // 
             this.lb_fecha.AutoSize = true;
             this.lb_fecha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fecha.Location = new System.Drawing.Point(31, 71);
+            this.lb_fecha.Location = new System.Drawing.Point(41, 87);
+            this.lb_fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_fecha.Name = "lb_fecha";
-            this.lb_fecha.Size = new System.Drawing.Size(202, 16);
+            this.lb_fecha.Size = new System.Drawing.Size(228, 19);
             this.lb_fecha.TabIndex = 10;
             this.lb_fecha.Text = "Domingo 4 de Mayo de 2024";
             // 
@@ -153,9 +161,10 @@
             // 
             this.lb_hora.AutoSize = true;
             this.lb_hora.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hora.Location = new System.Drawing.Point(88, 42);
+            this.lb_hora.Location = new System.Drawing.Point(117, 52);
+            this.lb_hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_hora.Name = "lb_hora";
-            this.lb_hora.Size = new System.Drawing.Size(90, 22);
+            this.lb_hora.Size = new System.Drawing.Size(105, 29);
             this.lb_hora.TabIndex = 9;
             this.lb_hora.Text = "14:36:05";
             // 
@@ -164,9 +173,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.label5.Location = new System.Drawing.Point(12, 12);
+            this.label5.Location = new System.Drawing.Point(16, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.Size = new System.Drawing.Size(117, 19);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fecha y hora:";
             // 
@@ -177,18 +187,20 @@
             this.panel_sesion_inicada.Controls.Add(this.label4);
             this.panel_sesion_inicada.Controls.Add(this.label1);
             this.panel_sesion_inicada.Controls.Add(this.lb_sesion);
-            this.panel_sesion_inicada.Location = new System.Drawing.Point(3, 4);
+            this.panel_sesion_inicada.Location = new System.Drawing.Point(4, 5);
+            this.panel_sesion_inicada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_sesion_inicada.Name = "panel_sesion_inicada";
-            this.panel_sesion_inicada.Size = new System.Drawing.Size(203, 100);
+            this.panel_sesion_inicada.Size = new System.Drawing.Size(271, 123);
             this.panel_sesion_inicada.TabIndex = 8;
             // 
             // lb_rol
             // 
             this.lb_rol.AutoSize = true;
             this.lb_rol.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_rol.Location = new System.Drawing.Point(82, 62);
+            this.lb_rol.Location = new System.Drawing.Point(109, 76);
+            this.lb_rol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_rol.Name = "lb_rol";
-            this.lb_rol.Size = new System.Drawing.Size(21, 15);
+            this.lb_rol.Size = new System.Drawing.Size(24, 17);
             this.lb_rol.TabIndex = 13;
             this.lb_rol.Text = "rol";
             // 
@@ -196,9 +208,10 @@
             // 
             this.lb_nombre_usuario.AutoSize = true;
             this.lb_nombre_usuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nombre_usuario.Location = new System.Drawing.Point(82, 42);
+            this.lb_nombre_usuario.Location = new System.Drawing.Point(109, 52);
+            this.lb_nombre_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nombre_usuario.Name = "lb_nombre_usuario";
-            this.lb_nombre_usuario.Size = new System.Drawing.Size(99, 15);
+            this.lb_nombre_usuario.Size = new System.Drawing.Size(114, 17);
             this.lb_nombre_usuario.TabIndex = 11;
             this.lb_nombre_usuario.Text = "nombre_usuario";
             // 
@@ -206,9 +219,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 62);
+            this.label4.Location = new System.Drawing.Point(25, 76);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 15);
+            this.label4.Size = new System.Drawing.Size(36, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Rol:";
             // 
@@ -216,9 +230,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 42);
+            this.label1.Location = new System.Drawing.Point(25, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Usuario:";
             // 
@@ -227,9 +242,10 @@
             this.lb_sesion.AutoSize = true;
             this.lb_sesion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_sesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.lb_sesion.Location = new System.Drawing.Point(19, 15);
+            this.lb_sesion.Location = new System.Drawing.Point(25, 18);
+            this.lb_sesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_sesion.Name = "lb_sesion";
-            this.lb_sesion.Size = new System.Drawing.Size(117, 16);
+            this.lb_sesion.Size = new System.Drawing.Size(132, 19);
             this.lb_sesion.TabIndex = 7;
             this.lb_sesion.Text = "Sesión iniciada:";
             // 
@@ -243,9 +259,11 @@
             this.group_btn_acesos.Controls.Add(this.btn_clasificacion_activos);
             this.group_btn_acesos.Controls.Add(this.btn_activos);
             this.group_btn_acesos.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group_btn_acesos.Location = new System.Drawing.Point(167, 136);
+            this.group_btn_acesos.Location = new System.Drawing.Point(223, 167);
+            this.group_btn_acesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.group_btn_acesos.Name = "group_btn_acesos";
-            this.group_btn_acesos.Size = new System.Drawing.Size(650, 306);
+            this.group_btn_acesos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.group_btn_acesos.Size = new System.Drawing.Size(867, 377);
             this.group_btn_acesos.TabIndex = 3;
             this.group_btn_acesos.TabStop = false;
             this.group_btn_acesos.Text = "¿Qué deseas realizar?";
@@ -254,9 +272,10 @@
             // 
             this.btn_empresa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_empresa.Image")));
-            this.btn_empresa.Location = new System.Drawing.Point(405, 171);
+            this.btn_empresa.Location = new System.Drawing.Point(540, 210);
+            this.btn_empresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_empresa.Name = "btn_empresa";
-            this.btn_empresa.Size = new System.Drawing.Size(100, 100);
+            this.btn_empresa.Size = new System.Drawing.Size(133, 123);
             this.btn_empresa.TabIndex = 6;
             this.btn_empresa.Text = "Empresa";
             this.btn_empresa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -268,35 +287,40 @@
             // 
             this.btn_usuarios.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuarios.Image")));
-            this.btn_usuarios.Location = new System.Drawing.Point(271, 171);
+            this.btn_usuarios.Location = new System.Drawing.Point(361, 210);
+            this.btn_usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_usuarios.Name = "btn_usuarios";
-            this.btn_usuarios.Size = new System.Drawing.Size(100, 100);
+            this.btn_usuarios.Size = new System.Drawing.Size(133, 123);
             this.btn_usuarios.TabIndex = 5;
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_operarios
             // 
             this.btn_operarios.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_operarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_operarios.Image")));
-            this.btn_operarios.Location = new System.Drawing.Point(134, 171);
+            this.btn_operarios.Location = new System.Drawing.Point(179, 210);
+            this.btn_operarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_operarios.Name = "btn_operarios";
-            this.btn_operarios.Size = new System.Drawing.Size(100, 100);
+            this.btn_operarios.Size = new System.Drawing.Size(133, 123);
             this.btn_operarios.TabIndex = 4;
             this.btn_operarios.Text = "Operarios";
             this.btn_operarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_operarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_operarios.UseVisualStyleBackColor = true;
+            this.btn_operarios.Click += new System.EventHandler(this.btn_operarios_Click);
             // 
             // btn_depreciacion_activos
             // 
             this.btn_depreciacion_activos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_depreciacion_activos.Image = ((System.Drawing.Image)(resources.GetObject("btn_depreciacion_activos.Image")));
-            this.btn_depreciacion_activos.Location = new System.Drawing.Point(476, 44);
+            this.btn_depreciacion_activos.Location = new System.Drawing.Point(635, 54);
+            this.btn_depreciacion_activos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_depreciacion_activos.Name = "btn_depreciacion_activos";
-            this.btn_depreciacion_activos.Size = new System.Drawing.Size(100, 100);
+            this.btn_depreciacion_activos.Size = new System.Drawing.Size(133, 123);
             this.btn_depreciacion_activos.TabIndex = 3;
             this.btn_depreciacion_activos.Text = "Depreciación de activos";
             this.btn_depreciacion_activos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -308,49 +332,56 @@
             // 
             this.btn_ubicaciones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ubicaciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_ubicaciones.Image")));
-            this.btn_ubicaciones.Location = new System.Drawing.Point(336, 44);
+            this.btn_ubicaciones.Location = new System.Drawing.Point(448, 54);
+            this.btn_ubicaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ubicaciones.Name = "btn_ubicaciones";
-            this.btn_ubicaciones.Size = new System.Drawing.Size(100, 100);
+            this.btn_ubicaciones.Size = new System.Drawing.Size(133, 123);
             this.btn_ubicaciones.TabIndex = 2;
             this.btn_ubicaciones.Text = "Ubicaciones";
             this.btn_ubicaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_ubicaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_ubicaciones.UseVisualStyleBackColor = true;
+            this.btn_ubicaciones.Click += new System.EventHandler(this.btn_ubicaciones_Click);
             // 
             // btn_clasificacion_activos
             // 
             this.btn_clasificacion_activos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clasificacion_activos.Image = ((System.Drawing.Image)(resources.GetObject("btn_clasificacion_activos.Image")));
-            this.btn_clasificacion_activos.Location = new System.Drawing.Point(202, 44);
+            this.btn_clasificacion_activos.Location = new System.Drawing.Point(269, 54);
+            this.btn_clasificacion_activos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_clasificacion_activos.Name = "btn_clasificacion_activos";
-            this.btn_clasificacion_activos.Size = new System.Drawing.Size(100, 100);
+            this.btn_clasificacion_activos.Size = new System.Drawing.Size(133, 123);
             this.btn_clasificacion_activos.TabIndex = 1;
             this.btn_clasificacion_activos.Text = "Clasificación de Activos";
             this.btn_clasificacion_activos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_clasificacion_activos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_clasificacion_activos.UseVisualStyleBackColor = true;
+            this.btn_clasificacion_activos.Click += new System.EventHandler(this.btn_clasificacion_activos_Click);
             // 
             // btn_activos
             // 
             this.btn_activos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_activos.Image = ((System.Drawing.Image)(resources.GetObject("btn_activos.Image")));
-            this.btn_activos.Location = new System.Drawing.Point(65, 44);
+            this.btn_activos.Location = new System.Drawing.Point(87, 54);
+            this.btn_activos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_activos.Name = "btn_activos";
-            this.btn_activos.Size = new System.Drawing.Size(100, 100);
+            this.btn_activos.Size = new System.Drawing.Size(133, 123);
             this.btn_activos.TabIndex = 0;
             this.btn_activos.Text = "Activos";
             this.btn_activos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_activos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_activos.UseVisualStyleBackColor = true;
+            this.btn_activos.Click += new System.EventHandler(this.btn_activos_Click);
             // 
             // FormInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 611);
+            this.ClientSize = new System.Drawing.Size(1312, 752);
             this.Controls.Add(this.group_btn_acesos);
             this.Controls.Add(this.panel_footer);
             this.Controls.Add(this.panel_encabezado);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormInicial";
             this.Text = "FormInicial";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
