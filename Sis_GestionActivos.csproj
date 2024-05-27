@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ClasificacionesActivosControlador.cs" />
     <Compile Include="Controladores\DepreciacionActivosControlador.cs" />
+    <Compile Include="Modelos\ClasificacionesActivosModelo.cs" />
     <Compile Include="Modelos\DBConexion.cs" />
     <Compile Include="Modelos\DepreciacionActivosModelo.cs" />
     <Compile Include="Recursos\Componentes.cs">
@@ -64,6 +66,12 @@
     </Compile>
     <Compile Include="Vistas\FormBuscar.Designer.cs">
       <DependentUpon>FormBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormClasificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormClasificaciones.Designer.cs">
+      <DependentUpon>FormClasificaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormDepreciacionActivos.cs">
       <SubType>Form</SubType>
@@ -104,6 +112,9 @@
     <EmbeddedResource Include="Vistas\FormBuscar.resx">
       <DependentUpon>FormBuscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormClasificaciones.resx">
+      <DependentUpon>FormClasificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormDepreciacionActivos.resx">
       <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,11 +154,15 @@
     <Content Include="Recursos\Icons\icons8-calcular-20.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-16.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-20.png" />
+    <Content Include="Recursos\Icons\icons8-edificios-64.png" />
+    <Content Include="Recursos\Icons\icons8-escritorio-64.png" />
     <Content Include="Recursos\Icons\icons8-guardar-16.png" />
     <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
+    <Content Include="Recursos\Icons\icons8-maquinaria-64.png" />
     <Content Include="Recursos\Icons\icons8-modificar-20.png" />
     <Content Include="Recursos\Icons\icons8-rehacer-20.png" />
     <Content Include="Recursos\Icons\icons8-search-20.png" />
+    <Content Include="Recursos\Icons\icons8-vehiculo-64.png" />
     <Content Include="Recursos\Icons\operarios_40.png" />
     <Content Include="Recursos\Icons\ubicaciones_35.png" />
     <Content Include="Recursos\Icons\ubicaciones_40.png" />

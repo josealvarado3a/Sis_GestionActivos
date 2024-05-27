@@ -83,5 +83,11 @@ namespace Sis_GestionActivos.Vistas
                 btn_usuarios.Enabled = false;
             }
         }
+
+        private void btn_clasificacion_activos_Click(object sender, EventArgs e)
+        {
+            FormClasificaciones formClasificaciones = new FormClasificaciones();
+            formClasificaciones.ShowDialog();
+        }
     }
 }

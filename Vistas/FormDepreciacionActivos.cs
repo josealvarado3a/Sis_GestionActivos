@@ -81,5 +81,17 @@ namespace Sis_GestionActivos.Vistas
 
             txt_fecha_registro.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
+
+        private void btn_buscar_35_Click(object sender, EventArgs e)
+        {
+            FormBuscar formBuscar = new FormBuscar();
+            formBuscar.DataGridView(DepreciacionActivosControlador.ListaActivosBuscar());
+            formBuscar.ColumnaBuscar("[Nombre del activo]", "ID Activo");
+            formBuscar.Text = "Buscar activos";
+            formBuscar.ShowDialog();
+
+            string idSeleccionado = formBuscar.IDBuscado;
+            txt_id_activo.Text = idSeleccionado;
+        }
     }
 }

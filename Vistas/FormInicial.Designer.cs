@@ -329,6 +329,7 @@
             this.btn_clasificacion_activos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_clasificacion_activos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_clasificacion_activos.UseVisualStyleBackColor = true;
+            this.btn_clasificacion_activos.Click += new System.EventHandler(this.btn_clasificacion_activos_Click);
             // 
             // btn_activos
             // 

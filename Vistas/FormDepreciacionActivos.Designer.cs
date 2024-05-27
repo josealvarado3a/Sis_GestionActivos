@@ -512,6 +512,7 @@
             this.btn_buscar_35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_buscar_35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_buscar_35.UseVisualStyleBackColor = false;
+            this.btn_buscar_35.Click += new System.EventHandler(this.btn_buscar_35_Click);
             // 
             // txt_id_activo
             // 

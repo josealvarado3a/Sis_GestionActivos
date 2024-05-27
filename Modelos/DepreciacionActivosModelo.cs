@@ -27,5 +27,23 @@ namespace Sis_GestionActivos.Modelos
             }
             return dtViewDepreciacionActivos;
         }
+
+        public static DataTable ListadoActivos()
+        {
+            DataTable dtListadoActivos = new DataTable();
+            string query = "SELECT id_activo AS 'ID Activo', codigo_interno_ac AS 'Codigo Interno', nombre_activo AS 'Nombre del activo' FROM tb_activos";
+            SqlCommand sqlLista = new SqlCommand(query, DBConexion.ConectarSQL());
+            try
+            {
+                SqlDataAdapter listaActivos = new SqlDataAdapter(sqlLista);
+                listaActivos.Fill(dtListadoActivos);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Models", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return dtListadoActivos;
+        }
     }
 }

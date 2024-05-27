@@ -16,5 +16,12 @@ namespace Sis_GestionActivos.Controladores
 
             return dtDepreciacionActivos;
         }
+
+        public static DataTable ListaActivosBuscar()
+        {
+            DataTable dtLista = new DataTable();
+            dtLista = DepreciacionActivosModelo.ListadoActivos();
+            return dtLista;
+        }
     }
 }
