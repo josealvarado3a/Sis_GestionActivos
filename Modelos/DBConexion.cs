@@ -34,8 +34,8 @@ namespace Sis_GestionActivos.Modelos
                     oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
                     oSetdb["dbName"] = "DBControlActivos";
                     break;
-                case "EMMANUEL":
-                    oSetdb["dbHost"] = "EMMANUEL\\SQLEXPRESS";
+                case "DESKTOP-T9C1R44":
+                    oSetdb["dbHost"] = "localhost";
                     oSetdb["dbName"] = "DBControlActivos";
                     break;
                 default:

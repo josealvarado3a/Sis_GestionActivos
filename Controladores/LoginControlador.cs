@@ -12,6 +12,15 @@ namespace Sis_GestionActivos.Controladores
 {
     public class LoginControlador
     {
+        public DataTable DatosUsuario(string usuarioLogin)
+        {
+            LoginModelo loginModelo = new LoginModelo();
+            DataTable dtDatosUsuario = new DataTable();
+
+            dtDatosUsuario = loginModelo.datosUsuario(usuarioLogin);
+
+            return dtDatosUsuario;
+        }
         public bool AutenticarLogin(string usuarioLogin, string password)
         {
             try
@@ -25,10 +34,10 @@ namespace Sis_GestionActivos.Controladores
                 {
                     DataRow fila = dtControllerUsuario.Rows[0];
 
-                    if (fila["usuario_login"] != DBNull.Value && fila["contraseña_usuario"] != DBNull.Value)
+                    if (fila["usuario_login"] != DBNull.Value && fila["contrasenia_usuario"] != DBNull.Value)
                     {
                         bool usuarioValido = usuarioLogin.Equals(fila["usuario_login"].ToString(), StringComparison.Ordinal);
-                        bool passwordValido = password.Equals(fila["contraseña_usuario"].ToString(), StringComparison.Ordinal);
+                        bool passwordValido = password.Equals(fila["contrasenia_usuario"].ToString(), StringComparison.Ordinal);
 
                         return usuarioValido && passwordValido;
                     }
@@ -37,7 +46,7 @@ namespace Sis_GestionActivos.Controladores
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show($"Ocurrió un error: {ex.Message}","Error Controllers",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
             }
         }

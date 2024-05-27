@@ -46,12 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBControlActivosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBControlActivosDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Controladores\DepreciacionActivosControlador.cs" />
     <Compile Include="Modelos\DBConexion.cs" />
+    <Compile Include="Modelos\DepreciacionActivosModelo.cs" />
     <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,11 +59,29 @@
     <Compile Include="Modelos\LoginModelo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FormBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormBuscar.Designer.cs">
+      <DependentUpon>FormBuscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormDepreciacionActivos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormDepreciacionActivos.Designer.cs">
       <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormEmpresa.Designer.cs">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormInicial.Designer.cs">
+      <DependentUpon>FormInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormLogin.cs">
       <SubType>Form</SubType>
@@ -93,8 +108,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\FormBuscar.resx">
+      <DependentUpon>FormBuscar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormDepreciacionActivos.resx">
       <DependentUpon>FormDepreciacionActivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEmpresa.resx">
+      <DependentUpon>FormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormInicial.resx">
+      <DependentUpon>FormInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -128,17 +152,22 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Modelos\DBControlActivos.sql" />
     <Content Include="Recursos\Icons\activos_40.png" />
+    <Content Include="Recursos\Icons\cerrar-sesion-40.png" />
     <Content Include="Recursos\Icons\clasificacion-activos-40.png" />
     <Content Include="Recursos\Icons\depreciacion_activos_40.png" />
     <Content Include="Recursos\Icons\empresa_40.png" />
+    <Content Include="Recursos\Icons\icons8-añadir-20.png" />
     <Content Include="Recursos\Icons\icons8-añadir-24.png" />
     <Content Include="Recursos\Icons\icons8-borrar-20.png" />
+    <Content Include="Recursos\Icons\icons8-calcular-20.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-16.png" />
     <Content Include="Recursos\Icons\icons8-cancelar-20.png" />
     <Content Include="Recursos\Icons\icons8-guardar-16.png" />
     <Content Include="Recursos\Icons\icons8-limpiar-20.png" />
     <Content Include="Recursos\Icons\icons8-modificar-20.png" />
+    <Content Include="Recursos\Icons\icons8-rehacer-20.png" />
     <Content Include="Recursos\Icons\icons8-search-20.png" />
     <Content Include="Recursos\Icons\operarios_40.png" />
     <Content Include="Recursos\Icons\ubicaciones_35.png" />
