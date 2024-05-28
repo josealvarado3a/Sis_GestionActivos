@@ -89,5 +89,11 @@ namespace Sis_GestionActivos.Vistas
             FormClasificaciones formClasificaciones = new FormClasificaciones();
             formClasificaciones.ShowDialog();
         }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            FormUsuarios formUsuarios = new FormUsuarios();
+            formUsuarios.ShowDialog();
+        }
     }
 }

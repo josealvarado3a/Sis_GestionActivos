@@ -326,6 +326,7 @@
             // 
             // txt_ultimo_anio
             // 
+            this.txt_ultimo_anio.Enabled = false;
             this.txt_ultimo_anio.Location = new System.Drawing.Point(819, 180);
             this.txt_ultimo_anio.Name = "txt_ultimo_anio";
             this.txt_ultimo_anio.Size = new System.Drawing.Size(100, 20);
@@ -497,6 +498,7 @@
             this.btn_rehacer_35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_rehacer_35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_rehacer_35.UseVisualStyleBackColor = false;
+            this.btn_rehacer_35.Click += new System.EventHandler(this.btn_rehacer_35_Click);
             // 
             // btn_buscar_35
             // 
@@ -521,6 +523,7 @@
             this.txt_id_activo.Name = "txt_id_activo";
             this.txt_id_activo.Size = new System.Drawing.Size(100, 20);
             this.txt_id_activo.TabIndex = 5;
+            this.txt_id_activo.TextChanged += new System.EventHandler(this.txt_id_activo_TextChanged);
             // 
             // label4
             // 

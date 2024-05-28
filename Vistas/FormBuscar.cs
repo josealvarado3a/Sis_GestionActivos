@@ -84,7 +84,7 @@ namespace Sis_GestionActivos.Vistas
         private void btn_aceptar_buscar_Click(object sender, EventArgs e)
         {
             string IDEncontrado = this.IDBuscado;
-            if (IDEncontrado != string.Empty)
+            if (!string.IsNullOrEmpty(IDEncontrado))
             {
                 this.Close();
             }

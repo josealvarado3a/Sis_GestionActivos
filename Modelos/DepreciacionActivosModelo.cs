@@ -45,5 +45,24 @@ namespace Sis_GestionActivos.Modelos
             }
             return dtListadoActivos;
         }
+
+        public static DataTable BuscarActivoParaDepreciar(string IdActivo)
+        {
+            DataTable dtActivoDepreciar = new DataTable();
+            string query = "EXEC STP_BuscarActivoParaDepreciacion @IdActivo";
+            SqlCommand sqlActivo = new SqlCommand(query, DBConexion.ConectarSQL());
+            sqlActivo.Parameters.AddWithValue("@IdActivo", IdActivo);
+            try
+            {
+                SqlDataAdapter listaActivos = new SqlDataAdapter(sqlActivo);
+                listaActivos.Fill(dtActivoDepreciar);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Models", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return dtActivoDepreciar;
+        }
     }
 }

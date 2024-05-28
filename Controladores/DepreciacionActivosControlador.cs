@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sis_GestionActivos.Controladores
 {
@@ -22,6 +23,22 @@ namespace Sis_GestionActivos.Controladores
             DataTable dtLista = new DataTable();
             dtLista = DepreciacionActivosModelo.ListadoActivos();
             return dtLista;
+        }
+
+        public static DataTable ActivoDepreciacion(string IdActivo)
+        {
+            DataTable dtActivo = new DataTable();
+
+            try
+            {
+                dtActivo = DepreciacionActivosModelo.BuscarActivoParaDepreciar(IdActivo);
+                return dtActivo;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Controllers");
+            }
+
+            return null;
         }
     }
 }

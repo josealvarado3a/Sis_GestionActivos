@@ -93,5 +93,56 @@ namespace Sis_GestionActivos.Vistas
             string idSeleccionado = formBuscar.IDBuscado;
             txt_id_activo.Text = idSeleccionado;
         }
+
+        private void txt_id_activo_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(txt_id_activo.Text))
+            {
+                string IdActivo = txt_id_activo.Text;
+                this.ActivoDepreciar(IdActivo);
+            }
+        }
+
+        public void ActivoDepreciar(string IdActivo)
+        {
+            DataTable dtActivo = new DataTable();
+            if (!string.IsNullOrEmpty(IdActivo))
+            {
+                dtActivo = DepreciacionActivosControlador.ActivoDepreciacion(IdActivo);
+
+                try
+                {
+                    txt_nombre_activo.Text = dtActivo.Rows[0]["nombre_activo"].ToString();
+                    txt_id_clasificacion.Text = dtActivo.Rows[0]["id_clasificacion_ac"].ToString();
+                    txt_nombre_clasificacion.Text = dtActivo.Rows[0]["nombre_clasificacion_ca"].ToString();
+                    txt_anio_vida_util.Text = dtActivo.Rows[0]["anios_vida_util_ca"].ToString();
+                    txt_porcentaje_anual.Text = (Convert.ToDouble(dtActivo.Rows[0]["porcentaje_anual_ca"])*100).ToString() + "%";
+                    txt_valor_activo.Text = dtActivo.Rows[0]["porcentaje_anual_ca"].ToString();
+                    txt_ubicacion_activo.Text = dtActivo.Rows[0]["nombre_ubicacion"].ToString();
+                    txt_anio_compra.Text = dtActivo.Rows[0]["Anio_alta"].ToString();
+                    txt_ultimo_anio.Text = dtActivo.Rows[0]["Ultimo_Anio"].ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error Form");
+                }
+            }
+        }
+
+        private void btn_rehacer_35_Click(object sender, EventArgs e)
+        {
+            txt_id_activo.Text = string.Empty;
+            txt_nombre_activo.Text = string.Empty;
+            txt_id_clasificacion.Text = string.Empty;
+            txt_nombre_clasificacion.Text = string.Empty;
+            txt_anio_vida_util.Text = string.Empty;
+            txt_porcentaje_anual.Text = string.Empty;
+            txt_valor_activo.Text = string.Empty;
+            txt_ubicacion_activo.Text = string.Empty;
+            txt_anio_compra.Text = string.Empty;
+            txt_ultimo_anio.Text = string.Empty;
+
+            MessageBox.Show("Los campos han sido restablecidos.", "Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

@@ -276,6 +276,7 @@
             this.btn_usuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_usuarios.UseVisualStyleBackColor = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_operarios
             // 
