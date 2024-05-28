@@ -52,7 +52,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txt_ubicacion_activo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_valor_residual = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_valor_activo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -89,6 +88,7 @@
             this.btn_buscar_td = new System.Windows.Forms.Button();
             this.txt_codigo_td = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.txt_valor_residual = new System.Windows.Forms.NumericUpDown();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tab_control_DAF.SuspendLayout();
@@ -99,6 +99,7 @@
             this.page_tarjeta_depreciacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_top
@@ -222,6 +223,7 @@
             // 
             // page_registro_DAF
             // 
+            this.page_registro_DAF.Controls.Add(this.txt_valor_residual);
             this.page_registro_DAF.Controls.Add(this.btn_cancelar);
             this.page_registro_DAF.Controls.Add(this.btn_guardar);
             this.page_registro_DAF.Controls.Add(this.cb_estado_depreciacion);
@@ -234,7 +236,6 @@
             this.page_registro_DAF.Controls.Add(this.label12);
             this.page_registro_DAF.Controls.Add(this.txt_ubicacion_activo);
             this.page_registro_DAF.Controls.Add(this.label11);
-            this.page_registro_DAF.Controls.Add(this.txt_valor_residual);
             this.page_registro_DAF.Controls.Add(this.label10);
             this.page_registro_DAF.Controls.Add(this.txt_valor_activo);
             this.page_registro_DAF.Controls.Add(this.label9);
@@ -293,6 +294,9 @@
             // cb_estado_depreciacion
             // 
             this.cb_estado_depreciacion.FormattingEnabled = true;
+            this.cb_estado_depreciacion.Items.AddRange(new object[] {
+            "1. Activo",
+            "2. Depreciado"});
             this.cb_estado_depreciacion.Location = new System.Drawing.Point(211, 252);
             this.cb_estado_depreciacion.Name = "cb_estado_depreciacion";
             this.cb_estado_depreciacion.Size = new System.Drawing.Size(120, 21);
@@ -374,13 +378,6 @@
             this.label11.Size = new System.Drawing.Size(107, 13);
             this.label11.TabIndex = 26;
             this.label11.Text = "Ubicación del activo:";
-            // 
-            // txt_valor_residual
-            // 
-            this.txt_valor_residual.Location = new System.Drawing.Point(52, 180);
-            this.txt_valor_residual.Name = "txt_valor_residual";
-            this.txt_valor_residual.Size = new System.Drawing.Size(100, 20);
-            this.txt_valor_residual.TabIndex = 25;
             // 
             // label10
             // 
@@ -731,6 +728,15 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Selecciona el activo que deseas calcular:";
             // 
+            // txt_valor_residual
+            // 
+            this.txt_valor_residual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_valor_residual.DecimalPlaces = 2;
+            this.txt_valor_residual.Location = new System.Drawing.Point(52, 180);
+            this.txt_valor_residual.Name = "txt_valor_residual";
+            this.txt_valor_residual.Size = new System.Drawing.Size(120, 20);
+            this.txt_valor_residual.TabIndex = 40;
+            // 
             // FormDepreciacionActivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,6 +762,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -787,7 +794,6 @@
         private System.Windows.Forms.TextBox txt_nombre_clasificacion;
         private System.Windows.Forms.TextBox txt_id_clasificacion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_valor_residual;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_valor_activo;
         private System.Windows.Forms.Label label9;
@@ -822,5 +828,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn td_depreciacion_anual;
         private System.Windows.Forms.DataGridViewTextBoxColumn td_depreciacion_acumulada;
         private System.Windows.Forms.DataGridViewTextBoxColumn td_valor_libros;
+        private System.Windows.Forms.NumericUpDown txt_valor_residual;
     }
 }

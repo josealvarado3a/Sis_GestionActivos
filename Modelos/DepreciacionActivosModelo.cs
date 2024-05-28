@@ -64,5 +64,31 @@ namespace Sis_GestionActivos.Modelos
             }
             return dtActivoDepreciar;
         }
+
+        public static int UltimoIdDepreciacion()
+        {
+            int ultimoId = -1; // valor por default en caso de error
+            string query = "SELECT dbo.obtenerUltimoIdTarea()";
+            SqlCommand select = new SqlCommand(query, DBConexion.ConectarSQL());
+            try
+            {
+                object resultado = select.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    ultimoId = Convert.ToInt32(resultado) + 1;
+                }
+                else
+                {
+                    ultimoId = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Models: " + ex.Message);
+            }
+
+            return ultimoId;
+        }
     }
 }
