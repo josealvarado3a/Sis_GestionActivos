@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\DepreciacionActivosControlador.cs" />
+    <Compile Include="Controladores\OperariosControlador.cs" />
     <Compile Include="DBControlActivosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,6 +55,7 @@
     </Compile>
     <Compile Include="Modelos\DBConexion.cs" />
     <Compile Include="Modelos\DepreciacionActivosModelo.cs" />
+    <Compile Include="Modelos\OperariosModelo.cs" />
     <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
     </Compile>

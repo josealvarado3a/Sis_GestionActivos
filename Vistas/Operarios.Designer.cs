@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operarios));
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -49,10 +50,11 @@
             this.dgvOperarios = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LabelOperarios = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNuevo
@@ -252,13 +254,14 @@
             this.dgvOperarios.Name = "dgvOperarios";
             this.dgvOperarios.RowHeadersWidth = 51;
             this.dgvOperarios.RowTemplate.Height = 24;
-            this.dgvOperarios.Size = new System.Drawing.Size(749, 128);
+            this.dgvOperarios.Size = new System.Drawing.Size(749, 186);
             this.dgvOperarios.TabIndex = 7;
             this.dgvOperarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperarios_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.LabelOperarios);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
@@ -271,25 +274,27 @@
             this.LabelOperarios.AutoSize = true;
             this.LabelOperarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelOperarios.ForeColor = System.Drawing.Color.Transparent;
-            this.LabelOperarios.Location = new System.Drawing.Point(40, 21);
+            this.LabelOperarios.Location = new System.Drawing.Point(63, 22);
             this.LabelOperarios.Name = "LabelOperarios";
             this.LabelOperarios.Size = new System.Drawing.Size(107, 25);
             this.LabelOperarios.TabIndex = 0;
             this.LabelOperarios.Text = "Operarios";
             // 
-            // dateTimePicker1
+            // pictureBox1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(486, 101);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 9;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Operarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(800, 508);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvOperarios);
             this.Controls.Add(this.cmbEstado2);
@@ -298,6 +303,8 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Operarios";
             this.Text = "Operarios";
             this.Load += new System.EventHandler(this.Operarios_Load);
@@ -306,6 +313,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,8 +325,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox gbDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idoperarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecharegistroopDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreoperarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargooperarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadooperarioDataGridViewCheckBoxColumn;
@@ -339,6 +345,6 @@
         private System.Windows.Forms.DataGridView dgvOperarios;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LabelOperarios;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

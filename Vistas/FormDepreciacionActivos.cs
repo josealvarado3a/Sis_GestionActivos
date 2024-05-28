@@ -81,5 +81,10 @@ namespace Sis_GestionActivos.Vistas
 
             txt_fecha_registro.Text = DateTime.Now.ToString("dd-MM-yyyy");
         }
+
+        private void AD_data_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
