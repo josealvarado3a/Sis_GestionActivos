@@ -32,5 +32,10 @@ namespace Sis_GestionActivos.Controladores
         {
             return nombreUsuario;
         }
+
+        public static string DiezCaracteres(string cadena)
+        {
+            return cadena.Substring(0, 10);
+        }
     }
 }

@@ -88,5 +88,52 @@ namespace Sis_GestionActivos.Vistas
             FormUsuarios formUsuarios = new FormUsuarios();
             formUsuarios.ShowDialog();
         }
+
+        private void btn_activos_Click(object sender, EventArgs e)
+        {
+            FormActivos formActivos = new FormActivos();
+            formActivos.ShowDialog();
+        }
+
+        private void btn_operarios_Click(object sender, EventArgs e)
+        {
+            Operarios operarios = new Operarios();
+            operarios.ShowDialog();
+        }
+
+        private void btn_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+
+            cerrarFormulario();
+        }
+
+        public void cerrarFormulario()
+        {
+            DialogResult resultado = MessageBox.Show("¿Estas seguro que deseas cerrar sesión?", "Consulta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Hide();
+                FormLogin formLogin = new FormLogin();
+                formLogin.ShowDialog();
+            }
+        }
+
+        private void FormInicial_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estas seguro que deseas cerrar sesión?", "Consulta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Hide();
+                FormLogin formLogin = new FormLogin();
+                formLogin.ShowDialog();
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

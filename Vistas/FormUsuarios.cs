@@ -28,6 +28,8 @@ namespace Sis_GestionActivos.Vistas
         {
             dataGridUsuarios();
             habilitarControles();
+
+
         }
 
         private void btn_nuevo_ad_Click(object sender, EventArgs e)
@@ -124,24 +126,136 @@ namespace Sis_GestionActivos.Vistas
                 case "Inactivo":
                     idEstado = 0;
                     break;
-                default: 
-                    idEstado = -1; 
-                   break;
+                default:
+                    idEstado = -1;
+                    break;
             }
 
             try
             {
-                UsuariosControlador.InsertarUsuario(idUsuario,fecha,nombres,apellidos,usuario,contrasenia,email, intRol, idEstado);
+                // Verificar si el usuario ya existe en la base de datos
+                if (UsuariosControlador.UsuarioExiste(idUsuario))
+                {
+                    // Si el usuario existe, actualizar los datos
+                    UsuariosControlador.ActualizarUsuario(idUsuario, fecha, nombres, apellidos, usuario, contrasenia, email, intRol, idEstado);
+                    MessageBox.Show("Datos actualizados correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Si el usuario no existe, insertarlo en la base de datos
+                    UsuariosControlador.InsertarUsuario(idUsuario, fecha, nombres, apellidos, usuario, contrasenia, email, intRol, idEstado);
+                    MessageBox.Show("Usuario ingresado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-                this.limpiarControles();
-                tab_listado_usuarios.SelectedTab = tab_listado_usuarios.TabPages[0];
-                this.habilitarControles();
-                this.dataGridUsuarios();
+                // Limpiar controles y actualizar DataGridView
+                limpiarControles();
+                dataGridUsuarios();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error Forms: " + ex.Message);
             }
+        }
+
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_modificar_ad_Click(object sender, EventArgs e)
+        {
+            // Verificar si se ha seleccionado una fila en el DataGridView
+            if (grid_lista_usuarios.SelectedRows.Count > 0)
+            {
+                // Obtener el ID de usuario seleccionado en el DataGridView
+                string idUsuarioSeleccionado = grid_lista_usuarios.SelectedRows[0].Cells["ID Usuario"].Value.ToString();
+
+                // Realizar una consulta a la base de datos para obtener los datos del usuario
+                DataTable dtUsuario = UsuariosControlador.ObtenerUsuarioPorId(idUsuarioSeleccionado);
+
+                // Verificar si se encontraron datos para el usuario seleccionado
+                if (dtUsuario.Rows.Count > 0)
+                {
+                    // Obtener los datos del primer registro (se supone que solo habrá uno)
+                    DataRow usuario = dtUsuario.Rows[0];
+
+                    // Llenar los campos del formulario con la información obtenida de la base de datos
+                    txtId.Text = usuario["id_usuario"].ToString();
+                    txtFecha.Text = usuario["fecha_registro_us"].ToString();
+                    txtNombre.Text = usuario["nombre_usuario"].ToString();
+                    txtApellidos.Text = usuario["apellidos_usuario"].ToString();
+                    txtUsuarioLogin.Text = usuario["usuario_login"].ToString();
+                    txt_contrasenia.Text = usuario["contrasenia_usuario"].ToString();
+                    txt_email.Text = usuario["email_usuario"].ToString();
+                    cbRol.Text = usuario["rol_usuario"].ToString();
+                    cb_estado.Text = usuario["estado_usuario"].ToString();
+
+                    // Cambiar al tab correspondiente para mostrar los datos del usuario
+                    tab_listado_usuarios.SelectedTab = tab_listado_usuarios.TabPages[1];
+                    habilitarControles(true);
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron datos para el usuario seleccionado.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un usuario en la lista.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        private void grid_lista_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuarioLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_contrasenia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_estado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            limpiarControles();
+            tab_listado_usuarios.SelectedTab = tab_listado_usuarios.TabPages[0];
         }
     }
 }
