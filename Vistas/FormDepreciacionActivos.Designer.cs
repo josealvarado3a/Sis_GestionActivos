@@ -40,6 +40,7 @@
             this.btn_nuevo_ad = new System.Windows.Forms.Button();
             this.AD_data_grid = new System.Windows.Forms.DataGridView();
             this.page_registro_DAF = new System.Windows.Forms.TabPage();
+            this.txt_valor_residual = new System.Windows.Forms.NumericUpDown();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.cb_estado_depreciacion = new System.Windows.Forms.ComboBox();
@@ -88,7 +89,8 @@
             this.btn_buscar_td = new System.Windows.Forms.Button();
             this.txt_codigo_td = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt_valor_residual = new System.Windows.Forms.NumericUpDown();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_eliminar_da = new System.Windows.Forms.Button();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tab_control_DAF.SuspendLayout();
@@ -96,10 +98,10 @@
             this.panel_botones_AD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_data_grid)).BeginInit();
             this.page_registro_DAF.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).BeginInit();
             this.page_tarjeta_depreciacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_top
@@ -181,6 +183,7 @@
             this.btn_eliminar_ad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar_ad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_eliminar_ad.UseVisualStyleBackColor = true;
+            this.btn_eliminar_ad.Click += new System.EventHandler(this.btn_eliminar_ad_Click);
             // 
             // btn_modificar_ad
             // 
@@ -194,6 +197,7 @@
             this.btn_modificar_ad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar_ad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_modificar_ad.UseVisualStyleBackColor = true;
+            this.btn_modificar_ad.Click += new System.EventHandler(this.btn_modificar_ad_Click);
             // 
             // btn_nuevo_ad
             // 
@@ -220,9 +224,12 @@
             this.AD_data_grid.RowTemplate.Height = 15;
             this.AD_data_grid.Size = new System.Drawing.Size(970, 441);
             this.AD_data_grid.TabIndex = 1;
+            this.AD_data_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AD_data_grid_CellClick);
             // 
             // page_registro_DAF
             // 
+            this.page_registro_DAF.Controls.Add(this.btn_eliminar_da);
+            this.page_registro_DAF.Controls.Add(this.btn_actualizar);
             this.page_registro_DAF.Controls.Add(this.txt_valor_residual);
             this.page_registro_DAF.Controls.Add(this.btn_cancelar);
             this.page_registro_DAF.Controls.Add(this.btn_guardar);
@@ -264,11 +271,19 @@
             this.page_registro_DAF.Text = "Registro";
             this.page_registro_DAF.UseVisualStyleBackColor = true;
             // 
+            // txt_valor_residual
+            // 
+            this.txt_valor_residual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_valor_residual.DecimalPlaces = 2;
+            this.txt_valor_residual.Location = new System.Drawing.Point(52, 180);
+            this.txt_valor_residual.Name = "txt_valor_residual";
+            this.txt_valor_residual.Size = new System.Drawing.Size(120, 20);
+            this.txt_valor_residual.TabIndex = 40;
+            // 
             // btn_cancelar
             // 
             this.btn_cancelar.AutoSize = true;
             this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.Image")));
             this.btn_cancelar.Location = new System.Drawing.Point(480, 246);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(87, 27);
@@ -276,6 +291,7 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_guardar
             // 
@@ -290,6 +306,7 @@
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // cb_estado_depreciacion
             // 
@@ -330,7 +347,6 @@
             // 
             // txt_ultimo_anio
             // 
-            this.txt_ultimo_anio.Enabled = false;
             this.txt_ultimo_anio.Location = new System.Drawing.Point(819, 180);
             this.txt_ultimo_anio.Name = "txt_ultimo_anio";
             this.txt_ultimo_anio.Size = new System.Drawing.Size(100, 20);
@@ -728,14 +744,29 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Selecciona el activo que deseas calcular:";
             // 
-            // txt_valor_residual
+            // btn_actualizar
             // 
-            this.txt_valor_residual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_valor_residual.DecimalPlaces = 2;
-            this.txt_valor_residual.Location = new System.Drawing.Point(52, 180);
-            this.txt_valor_residual.Name = "txt_valor_residual";
-            this.txt_valor_residual.Size = new System.Drawing.Size(120, 20);
-            this.txt_valor_residual.TabIndex = 40;
+            this.btn_actualizar.Location = new System.Drawing.Point(382, 246);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizar.TabIndex = 41;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Visible = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_eliminar_da
+            // 
+            this.btn_eliminar_da.AutoSize = true;
+            this.btn_eliminar_da.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar_da.Location = new System.Drawing.Point(387, 246);
+            this.btn_eliminar_da.Name = "btn_eliminar_da";
+            this.btn_eliminar_da.Size = new System.Drawing.Size(87, 27);
+            this.btn_eliminar_da.TabIndex = 42;
+            this.btn_eliminar_da.Text = "Eliminar";
+            this.btn_eliminar_da.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_eliminar_da.UseVisualStyleBackColor = true;
+            this.btn_eliminar_da.Click += new System.EventHandler(this.btn_eliminar_da_Click);
             // 
             // FormDepreciacionActivos
             // 
@@ -758,11 +789,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.AD_data_grid)).EndInit();
             this.page_registro_DAF.ResumeLayout(false);
             this.page_registro_DAF.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).EndInit();
             this.page_tarjeta_depreciacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -829,5 +860,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn td_depreciacion_acumulada;
         private System.Windows.Forms.DataGridViewTextBoxColumn td_valor_libros;
         private System.Windows.Forms.NumericUpDown txt_valor_residual;
+        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_eliminar_da;
     }
 }

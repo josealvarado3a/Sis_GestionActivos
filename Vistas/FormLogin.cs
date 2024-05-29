@@ -65,6 +65,8 @@ namespace Sis_GestionActivos.Vistas
                 var id_rol_usuario = dtDatosUsuario.Rows[0]["rol_usuario"].ToString();
                 var nombre_rol = dtDatosUsuario.Rows[0]["nombre_rol"].ToString();
 
+                Funciones.GetUsuarioLogin(usuario);
+
                 formInicial.datosInicioSesion(nombre_usuario,id_rol_usuario, nombre_rol);
                 formInicial.ShowDialog();
             }
