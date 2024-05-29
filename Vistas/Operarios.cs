@@ -300,75 +300,52 @@ namespace Sis_GestionActivos.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            int counts = 0;
-
             try
             {
                 // Utiliza DBConexion.ConectarSQL() para obtener una conexión SQL
                 using (SqlConnection conexion = DBConexion.ConectarSQL())
                 {
+                    // Verifica si se ha ingresado un id_operario válido
+                    if (string.IsNullOrEmpty(tbID.Text))
+                    {
+                        MessageBox.Show("El campo ID es obligatorio para la actualización.");
+                        return;
+                    }
+
+                    // Verifica si el id_operario existe en la base de datos
+                    bool idExistente = OperariosControlador.ExisteOperario(tbID.Text);
+
                     // Declara la consulta SQL y los parámetros
                     string consulta;
                     SqlCommand comando;
 
-                    // Verifica si se ha ingresado un ID válido
-                    if (!string.IsNullOrEmpty(tbID.Text))
+                    if (idExistente)
                     {
-                        // Verifica si el ID ya existe en la base de datos
-                        consulta = @"SELECT COUNT(*) FROM tb_operarios WHERE id_operario = @ID";
-                        comando = new SqlCommand(consulta, conexion);
-                        comando.Parameters.AddWithValue("@ID", tbID.Text);
-
-                        int count = (int)comando.ExecuteScalar();
-
-                        if (counts > 0)
-                        {
-                            // El ID existe en la base de datos, ejecutar actualización
-                            consulta = @"UPDATE tb_operarios 
-                                 SET fecha_registro_op = @Fecha, 
-                                     estado_operario = @Estado, 
-                                     cargo_operario = @Cargo, 
-                                     nombre_operario = @Nombre
-                                 WHERE id_operario = @ID";
-                        }
-                        else
-                        {
-                            // El ID no existe en la base de datos, ejecutar inserción
-                            consulta = @"INSERT INTO tb_operarios (id_operario, fecha_registro_op, estado_operario, cargo_operario, nombre_operario, descripcion_operario)
-                                 VALUES (@ID, @Fecha, @Estado, @Cargo, @Nombre, @Descripcion)";
-                        }
-
-                        // Crear un nuevo comando SQL con la consulta y la conexión
-                        comando = new SqlCommand(consulta, conexion);
-
-                        // Asignar el valor del parámetro ID
-                        comando.Parameters.AddWithValue("@ID", tbID.Text);
+                        // Se ha encontrado el id_operario en la base de datos, por lo tanto, se ejecutará una consulta de actualización
+                        consulta = @"UPDATE tb_operarios 
+                             SET fecha_registro_op = @Fecha, 
+                                 estado_operario = @Estado, 
+                                 cargo_operario = @Cargo, 
+                                 nombre_operario = @Nombre
+                             WHERE id_operario = @ID";
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese un ID válido.");
-                        return;
+                        // No se ha encontrado el id_operario en la base de datos, por lo tanto, se ejecutará una consulta de inserción
+                        consulta = @"INSERT INTO tb_operarios (id_operario, fecha_registro_op, estado_operario, cargo_operario, nombre_operario, descripcion_operario)
+                             VALUES (@ID, @Fecha, @Estado, @Cargo, @Nombre, @Descripcion)";
                     }
 
-                    // Asegúrate de que el formato de fecha sea compatible con SQL Server
-                    DateTime fechaRegistro;
-                    if (!DateTime.TryParse(tbFecha.Text, out fechaRegistro))
-                    {
-                        MessageBox.Show("Formato de fecha inválido.");
-                        return;
-                    }
+                    // Crea un nuevo comando SQL con la consulta y la conexión
+                    comando = new SqlCommand(consulta, conexion);
 
-                    // Convierte el estado del operario a bit (1 o 0)
-                    int estadoOperario = cmbEstado1.SelectedItem.ToString().ToLower() == "activo" ? 1 : 0;
-
-                    // Asigna los valores de los campos TextBox y ComboBox a los parámetros SQL
-                    comando.Parameters.AddWithValue("@Fecha", fechaRegistro);
-                    comando.Parameters.AddWithValue("@Estado", estadoOperario);
-                    comando.Parameters.AddWithValue("@Cargo", tbCargo.Text ?? (object)DBNull.Value); // Permite nulo
+                    // Asigna los valores de los parámetros SQL
+                    comando.Parameters.AddWithValue("@ID", tbID.Text);
+                    comando.Parameters.AddWithValue("@Fecha", DateTime.Now); // Puedes usar la fecha actual o el valor ingresado en tbFecha.Text
+                    comando.Parameters.AddWithValue("@Estado", cmbEstado1.SelectedItem.ToString().ToLower() == "activo" ? 1 : 0);
+                    comando.Parameters.AddWithValue("@Cargo", string.IsNullOrEmpty(tbCargo.Text) ? DBNull.Value : (object)tbCargo.Text);
                     comando.Parameters.AddWithValue("@Nombre", tbNombre.Text);
-                    // Asigna el valor del parámetro Descripcion
-                    comando.Parameters.AddWithValue("@Descripcion", "Descripción");
+                    comando.Parameters.AddWithValue("@Descripcion", DBNull.Value); // Valor nulo por defecto
 
                     // Ejecuta la consulta SQL
                     int filasAfectadas = comando.ExecuteNonQuery();
@@ -376,7 +353,7 @@ namespace Sis_GestionActivos.Vistas
                     // Verifica si se insertó o actualizó algún registro
                     if (filasAfectadas > 0)
                     {
-                        if (counts > 0)
+                        if (idExistente)
                         {
                             MessageBox.Show("Datos actualizados exitosamente en la base de datos.");
                         }
@@ -399,6 +376,7 @@ namespace Sis_GestionActivos.Vistas
                 MessageBox.Show("Error al insertar o actualizar los datos en la base de datos: " + ex.ToString());
             }
         }
+
 
 
 
