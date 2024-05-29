@@ -34,11 +34,6 @@
             this.lb_nombre_sistema = new System.Windows.Forms.Label();
             this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel_footer = new System.Windows.Forms.Panel();
-            this.panel_fecha = new System.Windows.Forms.Panel();
-            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
-            this.lb_fecha = new System.Windows.Forms.Label();
-            this.lb_hora = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel_sesion_inicada = new System.Windows.Forms.Panel();
             this.lb_rol = new System.Windows.Forms.Label();
             this.lb_nombre_usuario = new System.Windows.Forms.Label();
@@ -53,17 +48,22 @@
             this.btn_ubicaciones = new System.Windows.Forms.Button();
             this.btn_clasificacion_activos = new System.Windows.Forms.Button();
             this.btn_activos = new System.Windows.Forms.Button();
+            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
+            this.panel_fecha = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.panel_footer.SuspendLayout();
-            this.panel_fecha.SuspendLayout();
             this.panel_sesion_inicada.SuspendLayout();
             this.group_btn_acesos.SuspendLayout();
+            this.panel_fecha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_encabezado
             // 
             this.panel_encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
+            this.panel_encabezado.Controls.Add(this.pictureBox1);
             this.panel_encabezado.Controls.Add(this.label2);
             this.panel_encabezado.Controls.Add(this.lb_nombre_sistema);
             this.panel_encabezado.Controls.Add(this.picture_logo);
@@ -80,9 +80,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.label2.Location = new System.Drawing.Point(125, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 19);
+            this.label2.Size = new System.Drawing.Size(288, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "nombre_de_empresa";
+            this.label2.Text = "Distribuidora la Asunción, S.A de C.V";
             // 
             // lb_nombre_sistema
             // 
@@ -113,62 +113,6 @@
             this.panel_footer.Name = "panel_footer";
             this.panel_footer.Size = new System.Drawing.Size(984, 110);
             this.panel_footer.TabIndex = 2;
-            // 
-            // panel_fecha
-            // 
-            this.panel_fecha.Controls.Add(this.btn_cerrar_sesion);
-            this.panel_fecha.Controls.Add(this.lb_fecha);
-            this.panel_fecha.Controls.Add(this.lb_hora);
-            this.panel_fecha.Controls.Add(this.label5);
-            this.panel_fecha.Location = new System.Drawing.Point(591, 7);
-            this.panel_fecha.Name = "panel_fecha";
-            this.panel_fecha.Size = new System.Drawing.Size(384, 100);
-            this.panel_fecha.TabIndex = 9;
-            // 
-            // btn_cerrar_sesion
-            // 
-            this.btn_cerrar_sesion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.Red;
-            this.btn_cerrar_sesion.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar_sesion.Image")));
-            this.btn_cerrar_sesion.Location = new System.Drawing.Point(257, 0);
-            this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
-            this.btn_cerrar_sesion.Size = new System.Drawing.Size(100, 100);
-            this.btn_cerrar_sesion.TabIndex = 13;
-            this.btn_cerrar_sesion.Text = "Cerrar Sessión";
-            this.btn_cerrar_sesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cerrar_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_cerrar_sesion.UseVisualStyleBackColor = true;
-            // 
-            // lb_fecha
-            // 
-            this.lb_fecha.AutoSize = true;
-            this.lb_fecha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fecha.Location = new System.Drawing.Point(31, 71);
-            this.lb_fecha.Name = "lb_fecha";
-            this.lb_fecha.Size = new System.Drawing.Size(202, 16);
-            this.lb_fecha.TabIndex = 10;
-            this.lb_fecha.Text = "Domingo 4 de Mayo de 2024";
-            // 
-            // lb_hora
-            // 
-            this.lb_hora.AutoSize = true;
-            this.lb_hora.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hora.Location = new System.Drawing.Point(88, 42);
-            this.lb_hora.Name = "lb_hora";
-            this.lb_hora.Size = new System.Drawing.Size(90, 22);
-            this.lb_hora.TabIndex = 9;
-            this.lb_hora.Text = "14:36:05";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.label5.Location = new System.Drawing.Point(12, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Fecha y hora:";
             // 
             // panel_sesion_inicada
             // 
@@ -262,13 +206,14 @@
             this.btn_empresa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_empresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_empresa.UseVisualStyleBackColor = true;
+            this.btn_empresa.Visible = false;
             this.btn_empresa.Click += new System.EventHandler(this.btn_empresa_Click);
             // 
             // btn_usuarios
             // 
             this.btn_usuarios.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_usuarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuarios.Image")));
-            this.btn_usuarios.Location = new System.Drawing.Point(271, 171);
+            this.btn_usuarios.Location = new System.Drawing.Point(336, 171);
             this.btn_usuarios.Name = "btn_usuarios";
             this.btn_usuarios.Size = new System.Drawing.Size(100, 100);
             this.btn_usuarios.TabIndex = 5;
@@ -282,7 +227,7 @@
             // 
             this.btn_operarios.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_operarios.Image = ((System.Drawing.Image)(resources.GetObject("btn_operarios.Image")));
-            this.btn_operarios.Location = new System.Drawing.Point(134, 171);
+            this.btn_operarios.Location = new System.Drawing.Point(199, 171);
             this.btn_operarios.Name = "btn_operarios";
             this.btn_operarios.Size = new System.Drawing.Size(100, 100);
             this.btn_operarios.TabIndex = 4;
@@ -345,6 +290,38 @@
             this.btn_activos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_activos.UseVisualStyleBackColor = true;
             // 
+            // btn_cerrar_sesion
+            // 
+            this.btn_cerrar_sesion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.Red;
+            this.btn_cerrar_sesion.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar_sesion.Image")));
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(257, 0);
+            this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
+            this.btn_cerrar_sesion.Size = new System.Drawing.Size(100, 100);
+            this.btn_cerrar_sesion.TabIndex = 13;
+            this.btn_cerrar_sesion.Text = "Cerrar Sessión";
+            this.btn_cerrar_sesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cerrar_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_cerrar_sesion.UseVisualStyleBackColor = true;
+            // 
+            // panel_fecha
+            // 
+            this.panel_fecha.Controls.Add(this.btn_cerrar_sesion);
+            this.panel_fecha.Location = new System.Drawing.Point(591, 7);
+            this.panel_fecha.Name = "panel_fecha";
+            this.panel_fecha.Size = new System.Drawing.Size(384, 100);
+            this.panel_fecha.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,11 +339,11 @@
             this.panel_encabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.panel_footer.ResumeLayout(false);
-            this.panel_fecha.ResumeLayout(false);
-            this.panel_fecha.PerformLayout();
             this.panel_sesion_inicada.ResumeLayout(false);
             this.panel_sesion_inicada.PerformLayout();
             this.group_btn_acesos.ResumeLayout(false);
+            this.panel_fecha.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -386,16 +363,14 @@
         private System.Windows.Forms.Button btn_ubicaciones;
         private System.Windows.Forms.Button btn_clasificacion_activos;
         private System.Windows.Forms.Button btn_activos;
-        private System.Windows.Forms.Panel panel_fecha;
-        private System.Windows.Forms.Label lb_hora;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel_sesion_inicada;
         private System.Windows.Forms.Label lb_rol;
         private System.Windows.Forms.Label lb_nombre_usuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_sesion;
+        private System.Windows.Forms.Panel panel_fecha;
         private System.Windows.Forms.Button btn_cerrar_sesion;
-        private System.Windows.Forms.Label lb_fecha;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

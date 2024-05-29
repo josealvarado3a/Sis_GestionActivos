@@ -49,9 +49,11 @@
     <Compile Include="Controladores\ClasificacionesActivosControlador.cs" />
     <Compile Include="Controladores\DepreciacionActivosControlador.cs" />
     <Compile Include="Controladores\Funciones.cs" />
+    <Compile Include="Controladores\UsuariosControlador.cs" />
     <Compile Include="Modelos\ClasificacionesActivosModelo.cs" />
     <Compile Include="Modelos\DBConexion.cs" />
     <Compile Include="Modelos\DepreciacionActivosModelo.cs" />
+    <Compile Include="Modelos\UsuarioModelo.cs" />
     <Compile Include="Recursos\Componentes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -23,7 +23,6 @@ namespace Sis_GestionActivos.Vistas
             this.Text = lb_nombre_sistema.Text;
             this.WindowState = FormWindowState.Maximized;
             this.habilitarAccesos(this.idRolUsuario);
-            this.HorayFecha();
         }
 
         public void responisvo()
@@ -48,12 +47,6 @@ namespace Sis_GestionActivos.Vistas
         private void FormInicial_Resize(object sender, EventArgs e)
         {
             this.responisvo();
-        }
-
-        public void HorayFecha ()
-        {
-            lb_hora.Text = DateTime.Now.ToString("HH:mm:ss");
-            lb_fecha.Text = DateTime.Now.ToString("dddd:MMMM:yyyy");
         }
 
         private void btn_depreciacion_activos_Click(object sender, EventArgs e)

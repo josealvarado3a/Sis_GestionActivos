@@ -73,22 +73,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_fecha_registro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.page_tarjeta_depreciacion = new System.Windows.Forms.TabPage();
-            this.td_data_grid = new System.Windows.Forms.DataGridView();
-            this.td_anio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.td_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.td_depreciacion_anual = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.td_depreciacion_acumulada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.td_valor_libros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_limpiar_td = new System.Windows.Forms.Button();
-            this.btn_generar_pdf_td = new System.Windows.Forms.Button();
-            this.btn_calcular_td = new System.Windows.Forms.Button();
-            this.btn_rehacer_td = new System.Windows.Forms.Button();
-            this.txt_activo_td = new System.Windows.Forms.TextBox();
-            this.btn_buscar_td = new System.Windows.Forms.Button();
-            this.txt_codigo_td = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_eliminar_da = new System.Windows.Forms.Button();
             this.panel_top.SuspendLayout();
@@ -99,9 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AD_data_grid)).BeginInit();
             this.page_registro_DAF.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).BeginInit();
-            this.page_tarjeta_depreciacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_top
@@ -139,7 +120,6 @@
             // 
             this.tab_control_DAF.Controls.Add(this.page_activos_depreciados);
             this.tab_control_DAF.Controls.Add(this.page_registro_DAF);
-            this.tab_control_DAF.Controls.Add(this.page_tarjeta_depreciacion);
             this.tab_control_DAF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_control_DAF.Location = new System.Drawing.Point(0, 50);
             this.tab_control_DAF.Name = "tab_control_DAF";
@@ -581,169 +561,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Fecha de Registro:";
             // 
-            // page_tarjeta_depreciacion
-            // 
-            this.page_tarjeta_depreciacion.Controls.Add(this.td_data_grid);
-            this.page_tarjeta_depreciacion.Controls.Add(this.panel1);
-            this.page_tarjeta_depreciacion.Location = new System.Drawing.Point(4, 22);
-            this.page_tarjeta_depreciacion.Name = "page_tarjeta_depreciacion";
-            this.page_tarjeta_depreciacion.Padding = new System.Windows.Forms.Padding(3);
-            this.page_tarjeta_depreciacion.Size = new System.Drawing.Size(976, 485);
-            this.page_tarjeta_depreciacion.TabIndex = 2;
-            this.page_tarjeta_depreciacion.Text = "Tarjeta de depreciación";
-            this.page_tarjeta_depreciacion.UseVisualStyleBackColor = true;
-            // 
-            // td_data_grid
-            // 
-            this.td_data_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.td_data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.td_data_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.td_anio,
-            this.td_descripcion,
-            this.td_depreciacion_anual,
-            this.td_depreciacion_acumulada,
-            this.td_valor_libros});
-            this.td_data_grid.Location = new System.Drawing.Point(3, 71);
-            this.td_data_grid.Name = "td_data_grid";
-            this.td_data_grid.Size = new System.Drawing.Size(970, 411);
-            this.td_data_grid.TabIndex = 1;
-            // 
-            // td_anio
-            // 
-            this.td_anio.HeaderText = "Años";
-            this.td_anio.Name = "td_anio";
-            // 
-            // td_descripcion
-            // 
-            this.td_descripcion.HeaderText = "Descripción";
-            this.td_descripcion.Name = "td_descripcion";
-            // 
-            // td_depreciacion_anual
-            // 
-            this.td_depreciacion_anual.HeaderText = "Depreciación Anual";
-            this.td_depreciacion_anual.Name = "td_depreciacion_anual";
-            // 
-            // td_depreciacion_acumulada
-            // 
-            this.td_depreciacion_acumulada.HeaderText = "Depreciación Acumulada";
-            this.td_depreciacion_acumulada.Name = "td_depreciacion_acumulada";
-            // 
-            // td_valor_libros
-            // 
-            this.td_valor_libros.HeaderText = "Valor en libros";
-            this.td_valor_libros.Name = "td_valor_libros";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_limpiar_td);
-            this.panel1.Controls.Add(this.btn_generar_pdf_td);
-            this.panel1.Controls.Add(this.btn_calcular_td);
-            this.panel1.Controls.Add(this.btn_rehacer_td);
-            this.panel1.Controls.Add(this.txt_activo_td);
-            this.panel1.Controls.Add(this.btn_buscar_td);
-            this.panel1.Controls.Add(this.txt_codigo_td);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 67);
-            this.panel1.TabIndex = 0;
-            // 
-            // btn_limpiar_td
-            // 
-            this.btn_limpiar_td.AutoSize = true;
-            this.btn_limpiar_td.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpiar_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_limpiar_td.Image")));
-            this.btn_limpiar_td.Location = new System.Drawing.Point(5, 35);
-            this.btn_limpiar_td.Name = "btn_limpiar_td";
-            this.btn_limpiar_td.Size = new System.Drawing.Size(92, 27);
-            this.btn_limpiar_td.TabIndex = 47;
-            this.btn_limpiar_td.Text = "Limpiar";
-            this.btn_limpiar_td.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_limpiar_td.UseVisualStyleBackColor = true;
-            // 
-            // btn_generar_pdf_td
-            // 
-            this.btn_generar_pdf_td.AutoSize = true;
-            this.btn_generar_pdf_td.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_generar_pdf_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_generar_pdf_td.Image")));
-            this.btn_generar_pdf_td.Location = new System.Drawing.Point(103, 4);
-            this.btn_generar_pdf_td.Name = "btn_generar_pdf_td";
-            this.btn_generar_pdf_td.Size = new System.Drawing.Size(109, 27);
-            this.btn_generar_pdf_td.TabIndex = 44;
-            this.btn_generar_pdf_td.Text = "Generar PDF";
-            this.btn_generar_pdf_td.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_generar_pdf_td.UseVisualStyleBackColor = true;
-            // 
-            // btn_calcular_td
-            // 
-            this.btn_calcular_td.AutoSize = true;
-            this.btn_calcular_td.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.btn_calcular_td.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_calcular_td.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_calcular_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_calcular_td.Image")));
-            this.btn_calcular_td.Location = new System.Drawing.Point(5, 3);
-            this.btn_calcular_td.Name = "btn_calcular_td";
-            this.btn_calcular_td.Size = new System.Drawing.Size(92, 30);
-            this.btn_calcular_td.TabIndex = 43;
-            this.btn_calcular_td.Text = "Calcular";
-            this.btn_calcular_td.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_calcular_td.UseVisualStyleBackColor = false;
-            // 
-            // btn_rehacer_td
-            // 
-            this.btn_rehacer_td.AutoSize = true;
-            this.btn_rehacer_td.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.btn_rehacer_td.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rehacer_td.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_rehacer_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_rehacer_td.Image")));
-            this.btn_rehacer_td.Location = new System.Drawing.Point(571, 3);
-            this.btn_rehacer_td.Name = "btn_rehacer_td";
-            this.btn_rehacer_td.Size = new System.Drawing.Size(30, 30);
-            this.btn_rehacer_td.TabIndex = 42;
-            this.btn_rehacer_td.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rehacer_td.UseVisualStyleBackColor = false;
-            // 
-            // txt_activo_td
-            // 
-            this.txt_activo_td.Enabled = false;
-            this.txt_activo_td.Location = new System.Drawing.Point(607, 9);
-            this.txt_activo_td.Name = "txt_activo_td";
-            this.txt_activo_td.Size = new System.Drawing.Size(354, 20);
-            this.txt_activo_td.TabIndex = 40;
-            // 
-            // btn_buscar_td
-            // 
-            this.btn_buscar_td.AutoSize = true;
-            this.btn_buscar_td.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(82)))), ((int)(((byte)(179)))));
-            this.btn_buscar_td.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_td.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_buscar_td.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar_td.Image")));
-            this.btn_buscar_td.Location = new System.Drawing.Point(535, 3);
-            this.btn_buscar_td.Name = "btn_buscar_td";
-            this.btn_buscar_td.Size = new System.Drawing.Size(30, 30);
-            this.btn_buscar_td.TabIndex = 39;
-            this.btn_buscar_td.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_buscar_td.UseVisualStyleBackColor = false;
-            this.btn_buscar_td.Click += new System.EventHandler(this.btn_buscar_td_Click);
-            // 
-            // txt_codigo_td
-            // 
-            this.txt_codigo_td.Enabled = false;
-            this.txt_codigo_td.Location = new System.Drawing.Point(425, 8);
-            this.txt_codigo_td.Name = "txt_codigo_td";
-            this.txt_codigo_td.Size = new System.Drawing.Size(100, 20);
-            this.txt_codigo_td.TabIndex = 2;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(215, 12);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(204, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Selecciona el activo que deseas calcular:";
-            // 
             // btn_actualizar
             // 
             this.btn_actualizar.Location = new System.Drawing.Point(382, 246);
@@ -790,10 +607,6 @@
             this.page_registro_DAF.ResumeLayout(false);
             this.page_registro_DAF.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_valor_residual)).EndInit();
-            this.page_tarjeta_depreciacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.td_data_grid)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -806,7 +619,6 @@
         private System.Windows.Forms.TabControl tab_control_DAF;
         private System.Windows.Forms.TabPage page_activos_depreciados;
         private System.Windows.Forms.TabPage page_registro_DAF;
-        private System.Windows.Forms.TabPage page_tarjeta_depreciacion;
         private System.Windows.Forms.Panel panel_botones_AD;
         private System.Windows.Forms.DataGridView AD_data_grid;
         private System.Windows.Forms.Button btn_nuevo_ad;
@@ -844,21 +656,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btn_rehacer_td;
-        private System.Windows.Forms.TextBox txt_activo_td;
-        private System.Windows.Forms.Button btn_buscar_td;
-        private System.Windows.Forms.TextBox txt_codigo_td;
-        private System.Windows.Forms.Button btn_limpiar_td;
-        private System.Windows.Forms.Button btn_generar_pdf_td;
-        private System.Windows.Forms.Button btn_calcular_td;
-        private System.Windows.Forms.DataGridView td_data_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn td_anio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn td_descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn td_depreciacion_anual;
-        private System.Windows.Forms.DataGridViewTextBoxColumn td_depreciacion_acumulada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn td_valor_libros;
         private System.Windows.Forms.NumericUpDown txt_valor_residual;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_eliminar_da;
