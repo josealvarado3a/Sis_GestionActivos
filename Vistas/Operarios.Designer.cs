@@ -49,8 +49,8 @@
             this.cmbEstado2 = new System.Windows.Forms.ComboBox();
             this.dgvOperarios = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelOperarios = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LabelOperarios = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
             this.panel1.SuspendLayout();
@@ -260,7 +260,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel1.BackColor = System.Drawing.Color.BlueViolet;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.LabelOperarios);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
@@ -268,6 +268,16 @@
             this.panel1.Size = new System.Drawing.Size(802, 69);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // LabelOperarios
             // 
@@ -279,16 +289,6 @@
             this.LabelOperarios.Size = new System.Drawing.Size(107, 25);
             this.LabelOperarios.TabIndex = 0;
             this.LabelOperarios.Text = "Operarios";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // Operarios
             // 

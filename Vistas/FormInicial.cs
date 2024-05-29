@@ -92,7 +92,8 @@ namespace Sis_GestionActivos.Vistas
 
         private void btn_activos_Click(object sender, EventArgs e)
         {
-
+            FormActivos formActivos = new FormActivos();
+            formActivos.ShowDialog();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
