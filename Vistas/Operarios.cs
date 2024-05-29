@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Sis_GestionActivos.Vistas
 {
@@ -19,7 +20,7 @@ namespace Sis_GestionActivos.Vistas
     {
         public Operarios()
         {
-            InitializeComponent();;
+            InitializeComponent(); ;
         }
 
         private bool loadingData = false;
@@ -197,7 +198,7 @@ namespace Sis_GestionActivos.Vistas
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -299,6 +300,9 @@ namespace Sis_GestionActivos.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            int counts = 0;
+
             try
             {
                 // Utiliza DBConexion.ConectarSQL() para obtener una conexión SQL
@@ -308,34 +312,43 @@ namespace Sis_GestionActivos.Vistas
                     string consulta;
                     SqlCommand comando;
 
-                    // Verifica si se ha seleccionado un operario para modificar
+                    // Verifica si se ha ingresado un ID válido
                     if (!string.IsNullOrEmpty(tbID.Text))
                     {
-                        // Se ha seleccionado un operario, por lo tanto, se ejecutará una consulta de actualización
-                        consulta = @"UPDATE tb_operarios 
-                                     SET fecha_registro_op = @Fecha, 
-                                         estado_operario = @Estado, 
-                                         cargo_operario = @Cargo, 
-                                         nombre_operario = @Nombre
-                                     WHERE id_operario = @ID";
+                        // Verifica si el ID ya existe en la base de datos
+                        consulta = @"SELECT COUNT(*) FROM tb_operarios WHERE id_operario = @ID";
+                        comando = new SqlCommand(consulta, conexion);
+                        comando.Parameters.AddWithValue("@ID", tbID.Text);
 
-                        // Crea un nuevo comando SQL con la consulta de actualización y la conexión
+                        int count = (int)comando.ExecuteScalar();
+
+                        if (counts > 0)
+                        {
+                            // El ID existe en la base de datos, ejecutar actualización
+                            consulta = @"UPDATE tb_operarios 
+                                 SET fecha_registro_op = @Fecha, 
+                                     estado_operario = @Estado, 
+                                     cargo_operario = @Cargo, 
+                                     nombre_operario = @Nombre
+                                 WHERE id_operario = @ID";
+                        }
+                        else
+                        {
+                            // El ID no existe en la base de datos, ejecutar inserción
+                            consulta = @"INSERT INTO tb_operarios (id_operario, fecha_registro_op, estado_operario, cargo_operario, nombre_operario, descripcion_operario)
+                                 VALUES (@ID, @Fecha, @Estado, @Cargo, @Nombre, @Descripcion)";
+                        }
+
+                        // Crear un nuevo comando SQL con la consulta y la conexión
                         comando = new SqlCommand(consulta, conexion);
 
-                        // Asigna el valor del parámetro ID
+                        // Asignar el valor del parámetro ID
                         comando.Parameters.AddWithValue("@ID", tbID.Text);
                     }
                     else
                     {
-                        // No se ha seleccionado un operario, por lo tanto, se ejecutará una consulta de inserción
-                        consulta = @"INSERT INTO tb_operarios (id_operario, fecha_registro_op, estado_operario, cargo_operario, nombre_operario)
-                                     VALUES (@ID, @Fecha, @Estado, @Cargo, @Nombre)";
-
-                        // Crea un nuevo comando SQL con la consulta de inserción y la conexión
-                        comando = new SqlCommand(consulta, conexion);
-
-                        // Asigna el valor del parámetro ID
-                        comando.Parameters.AddWithValue("@ID", CorrTarea());
+                        MessageBox.Show("Ingrese un ID válido.");
+                        return;
                     }
 
                     // Asegúrate de que el formato de fecha sea compatible con SQL Server
@@ -354,6 +367,8 @@ namespace Sis_GestionActivos.Vistas
                     comando.Parameters.AddWithValue("@Estado", estadoOperario);
                     comando.Parameters.AddWithValue("@Cargo", tbCargo.Text ?? (object)DBNull.Value); // Permite nulo
                     comando.Parameters.AddWithValue("@Nombre", tbNombre.Text);
+                    // Asigna el valor del parámetro Descripcion
+                    comando.Parameters.AddWithValue("@Descripcion", "Descripción");
 
                     // Ejecuta la consulta SQL
                     int filasAfectadas = comando.ExecuteNonQuery();
@@ -361,7 +376,7 @@ namespace Sis_GestionActivos.Vistas
                     // Verifica si se insertó o actualizó algún registro
                     if (filasAfectadas > 0)
                     {
-                        if (!string.IsNullOrEmpty(tbID.Text))
+                        if (counts > 0)
                         {
                             MessageBox.Show("Datos actualizados exitosamente en la base de datos.");
                         }
@@ -381,9 +396,10 @@ namespace Sis_GestionActivos.Vistas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al insertar o actualizar los datos en la base de datos: " + ex.Message);
+                MessageBox.Show("Error al insertar o actualizar los datos en la base de datos: " + ex.ToString());
             }
         }
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
